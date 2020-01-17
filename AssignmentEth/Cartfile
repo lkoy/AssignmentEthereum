@@ -1,0 +1,3 @@
+github "airbnb/lottie-ios" ~> 2.5
+github "lkoy/EthereumKit"
+github "Alamofire/Alamofire" ~> 4.7
