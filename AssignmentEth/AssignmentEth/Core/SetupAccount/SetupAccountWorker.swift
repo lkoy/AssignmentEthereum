@@ -43,9 +43,14 @@ final class SetupAccountWorker: SetupAccountWorkerAlias {
         geth.getBalance(of: wallet.address(), blockParameter: .latest) { result in
             switch result {
             case .success(let balance):
-                self.store(account: AppModels.AccountDetails(address: wallet.address(), wei: balance.wei),
-                           privateKey: AppModels.PrivateKeyApp(pritateKey: input),
-                           andHandle: completion)
+                do {
+                    let ether = try balance.ether()
+                    self.store(account: AppModels.AccountDetails(address: wallet.address(), ether: ether),
+                    privateKey: AppModels.PrivateKeyApp(pritateKey: input),
+                    andHandle: completion)
+                } catch {
+                    completion(.failure(.convertError(.failedToConvert(balance.wei))))
+                }
             case .failure(let error):
                 completion(Result.failure(error))
             }

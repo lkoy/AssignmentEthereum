@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import EthereumKit
 
 enum AppModels {
     
@@ -17,6 +16,6 @@ enum AppModels {
     
     struct AccountDetails: Codable {
         let address: String
-        let wei: Wei
+        let ether: Decimal
     }
 }

@@ -44,7 +44,7 @@ extension SetupAccountPresenter: SetupAccountInteractorCallbackProtocol {
 
     func accoutObtained(accountDetails: AppModels.AccountDetails) {
         self.viewController.hideLoadingState()
-        print("Account address: \(accountDetails.address) Weis: \(accountDetails.wei)")
+        print("Account address: \(accountDetails.address) Weis: \(accountDetails.ether)")
         self.router.navigateToAccountDetails(accountDetails: accountDetails)
     }
     
