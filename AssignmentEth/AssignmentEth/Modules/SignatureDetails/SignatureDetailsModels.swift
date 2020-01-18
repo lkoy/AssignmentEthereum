@@ -1,5 +1,5 @@
 //
-//  AccountDetailsModels.swift
+//  SignatureDetailsModels.swift
 //  AssignmentEth
 //
 //  Created by ttg on 18/01/2020.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum AccountDetails {
+enum SignatureDetails {
 
     struct ViewModel: Equatable {
         
-        let addressValue: String
-        let balanceValue: String
+        let messageValue: String
+        let signedMessageValue: String
     }
 }

@@ -1,18 +1,18 @@
 //
-//  SetupAccountViewController.swift
+//  SignMessageViewController.swift
 //  AssignmentEth
 //
-//  Created by ttg on 17/01/2020.
+//  Created by ttg on 18/01/2020.
 //  Copyright © 2020 ttg. All rights reserved.
 //
 
 import UIKit
 
-final class SetupAccountViewController: BaseViewController {
-
-    override var prefersNavigationBarHidden: Bool { return true }
+final class SignMessageViewController: BaseViewController {
     
-    var presenter: SetupAccountPresenterProtocol!
+    override var prefersNavigationBarHidden: Bool { return true }
+
+    var presenter: SignMessagePresenterProtocol!
 
     // MARK: - Component Declaration
 
@@ -21,13 +21,13 @@ final class SetupAccountViewController: BaseViewController {
         static let marginsButton = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
         static let marginsField = UIEdgeInsets(top: 0, left: 15, bottom: 10, right: 15)
         static let spacing: CGFloat = 16.0
-        static let buttonWidth: CGFloat = 120.0
+        static let buttonWidth: CGFloat = 160.0
         static let buttonHeight: CGFloat = 40.0
     }
     
     private var topBar: TopBarView!
-    private var privateKeyField: TextField!
-    private var confirmButton: Button!
+    private var messageField: TextField!
+    private var signButton: Button!
     
     private var bottomConstraint: NSLayoutConstraint!
     
@@ -58,11 +58,6 @@ final class SetupAccountViewController: BaseViewController {
                                                name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        showKeyboard()
-    }
 
     // MARK: - Setup
 
@@ -70,41 +65,41 @@ final class SetupAccountViewController: BaseViewController {
 
         view.backgroundColor = .white
         
-        topBar = TopBarView(type: .title, title: "Setup", subtitle: "User your private key to get your balance.")
+        topBar = TopBarView(type: .navigation, title: "Signing")
+        topBar.delegate = self
         topBar.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(topBar)
         
-        privateKeyField = TextField()
-        privateKeyField.title = "Private key"
-        privateKeyField.status = .normal
-        privateKeyField.keyboardType = .default
-        privateKeyField.returnKeyType = .done
-        privateKeyField.delegate = self
-        privateKeyField.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(privateKeyField)
+        messageField = TextField()
+        messageField.title = "Your message"
+        messageField.status = .normal
+        messageField.keyboardType = .default
+        messageField.delegate = self
+        messageField.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(messageField)
         
-        confirmButton = Button(style: .violet)
-        confirmButton.title = "Continue"
-        confirmButton.addTarget(self, action: #selector(confirmTapped), for: .touchUpInside)
-        confirmButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(confirmButton)
+        signButton = Button(style: .violet)
+        signButton.title = "Sign message"
+        signButton.addTarget(self, action: #selector(signMessageTapped), for: .touchUpInside)
+        signButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(signButton)
     }
 
     override func setupConstraints() {
 
-        bottomConstraint = confirmButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -ViewTraits.marginsButton.bottom)
+        bottomConstraint = signButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -ViewTraits.marginsButton.bottom)
         NSLayoutConstraint.activate([
             topBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: ViewTraits.marginsTopBar.top),
             topBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             topBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             
-            privateKeyField.topAnchor.constraint(equalTo: topBar.bottomAnchor, constant: ViewTraits.marginsTopBar.bottom),
-            privateKeyField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: ViewTraits.marginsField.left),
-            privateKeyField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -ViewTraits.marginsField.right),
+            messageField.topAnchor.constraint(equalTo: topBar.bottomAnchor, constant: ViewTraits.marginsTopBar.bottom),
+            messageField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: ViewTraits.marginsField.left),
+            messageField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -ViewTraits.marginsField.right),
             
-            confirmButton.widthAnchor.constraint(equalToConstant: ViewTraits.buttonWidth),
-            confirmButton.heightAnchor.constraint(equalToConstant: ViewTraits.buttonHeight),
-            confirmButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            signButton.widthAnchor.constraint(equalToConstant: ViewTraits.buttonWidth),
+            signButton.heightAnchor.constraint(equalToConstant: ViewTraits.buttonHeight),
+            signButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             bottomConstraint
         ])
     }
@@ -114,15 +109,15 @@ final class SetupAccountViewController: BaseViewController {
     }
 
     // MARK: - Actions
-    
-    @objc private func confirmTapped() {
-        "30278911D6B6E8FB4D53AF9F4EBAF8B8BEA8D6752CCB1FC316E4EC861D87AFD9"
-        let privateKey = privateKeyField.value
-        self.presenter.getDetails(forInput: privateKey)
+
+    @objc private func signMessageTapped() {
+
+        let message = messageField.value
+        self.presenter.singMessage(message)
     }
-
+    
     // MARK: Private Methods
-
+    
     @objc private func keyBoardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
             let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double {
@@ -144,26 +139,21 @@ final class SetupAccountViewController: BaseViewController {
     }
 }
 
-// MARK: - SetupAccountViewControllerProtocol
-extension SetupAccountViewController: SetupAccountViewControllerProtocol {
+// MARK: - SignMessageViewControllerProtocol
+extension SignMessageViewController: SignMessageViewControllerProtocol {
  
-    func showKeyboard() {
-//        privateKeyField.becomeFirstResponder()
-    }
+}
+
+// MARK: - TopBar Delegate
+extension SignMessageViewController: TopBarViewDelegate {
     
-    func showLoadingState() {
-        confirmButton.isLoading = true
-    }
-    
-    func hideLoadingState() {
-        confirmButton.isLoading = false
+    func topBarView(_ topBarView: TopBarView, didPressItem item: Button) {
+        presenter.backPressed()
     }
 }
 
 // MARK: - UITextFieldDelegate
-extension SetupAccountViewController: TextFieldDelegate {
+extension SignMessageViewController: TextFieldDelegate {
      
-    func textFieldDidPressReturnKey(_ textField: TextField) {
-        self.presenter.getDetails(forInput:textField.value)
-    }
+    
 }

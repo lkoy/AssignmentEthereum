@@ -15,7 +15,9 @@ final class AccountDetailsBuilder: BaseBuilder {
 
         let viewController: AccountDetailsViewController = AccountDetailsViewController()
         let router: AccountDetailsRouter = AccountDetailsRouter(viewController: viewController)
-        let presenter: AccountDetailsPresenter = AccountDetailsPresenter(viewController: viewController, router: router, accountDetails: accountDetails)
+        let mapper: AccountDetailsMapper = AccountDetailsMapper()
+        
+        let presenter: AccountDetailsPresenter = AccountDetailsPresenter(viewController: viewController, router: router, accountDetails: accountDetails, accountDetailsMapper: mapper)
         viewController.presenter = presenter
 
         return viewController

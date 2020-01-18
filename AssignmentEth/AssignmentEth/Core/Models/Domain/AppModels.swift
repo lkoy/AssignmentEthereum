@@ -18,4 +18,9 @@ enum AppModels {
         let address: String
         let ether: Decimal
     }
+    
+    struct MessageSigned: Codable {
+        let message: String
+        let signedMessage: String
+    }
 }

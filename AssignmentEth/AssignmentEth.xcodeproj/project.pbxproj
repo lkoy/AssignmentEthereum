@@ -55,6 +55,26 @@
 		5330F2DE23D290F000B073E8 /* AccountDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2D923D290F000B073E8 /* AccountDetailsModels.swift */; };
 		5330F2DF23D290F000B073E8 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2DA23D290F000B073E8 /* AccountDetailsViewController.swift */; };
 		5330F2E023D290F000B073E8 /* AccountDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2DB23D290F000B073E8 /* AccountDetailsBuilder.swift */; };
+		5330F2E523D32D6A00B073E8 /* AccountDetailsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2E423D32D6A00B073E8 /* AccountDetailsMapper.swift */; };
+		5330F2E723D32E5800B073E8 /* Decimal+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2E623D32E5800B073E8 /* Decimal+String.swift */; };
+		5330F2EE23D3390C00B073E8 /* SignMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2E923D3390C00B073E8 /* SignMessagePresenter.swift */; };
+		5330F2EF23D3390C00B073E8 /* SignMessageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2EA23D3390C00B073E8 /* SignMessageRouter.swift */; };
+		5330F2F023D3390C00B073E8 /* SignMessageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2EB23D3390C00B073E8 /* SignMessageModels.swift */; };
+		5330F2F123D3390C00B073E8 /* SignMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2EC23D3390C00B073E8 /* SignMessageViewController.swift */; };
+		5330F2F223D3390C00B073E8 /* SignMessageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2ED23D3390C00B073E8 /* SignMessageBuilder.swift */; };
+		5330F2F923D33F5C00B073E8 /* VerifyMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2F423D33F5C00B073E8 /* VerifyMessagePresenter.swift */; };
+		5330F2FA23D33F5C00B073E8 /* VerifyMessageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2F523D33F5C00B073E8 /* VerifyMessageRouter.swift */; };
+		5330F2FB23D33F5C00B073E8 /* VerifyMessageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2F623D33F5C00B073E8 /* VerifyMessageModels.swift */; };
+		5330F2FC23D33F5C00B073E8 /* VerifyMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2F723D33F5C00B073E8 /* VerifyMessageViewController.swift */; };
+		5330F2FD23D33F5C00B073E8 /* VerifyMessageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2F823D33F5C00B073E8 /* VerifyMessageBuilder.swift */; };
+		5330F30123D3490B00B073E8 /* SignMessageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2FF23D3490B00B073E8 /* SignMessageWorker.swift */; };
+		5330F30223D3490B00B073E8 /* SignMessageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F30023D3490B00B073E8 /* SignMessageInteractor.swift */; };
+		5330F30923D357A500B073E8 /* SignatureDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F30423D357A500B073E8 /* SignatureDetailsPresenter.swift */; };
+		5330F30A23D357A500B073E8 /* SignatureDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F30523D357A500B073E8 /* SignatureDetailsRouter.swift */; };
+		5330F30B23D357A500B073E8 /* SignatureDetailsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F30623D357A500B073E8 /* SignatureDetailsModels.swift */; };
+		5330F30C23D357A500B073E8 /* SignatureDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F30723D357A500B073E8 /* SignatureDetailsViewController.swift */; };
+		5330F30D23D357A500B073E8 /* SignatureDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F30823D357A500B073E8 /* SignatureDetailsBuilder.swift */; };
+		5330F30F23D35C1D00B073E8 /* SignatureDetailsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F30E23D35C1D00B073E8 /* SignatureDetailsMapper.swift */; };
 		538541A823D0C07D007D5FF3 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538541A223D0C07C007D5FF3 /* BaseInteractor.swift */; };
 		538541A923D0C07D007D5FF3 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538541A323D0C07C007D5FF3 /* BasePresenter.swift */; };
 		538541AA23D0C07D007D5FF3 /* BaseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538541A423D0C07C007D5FF3 /* BaseBuilder.swift */; };
@@ -162,6 +182,26 @@
 		5330F2D923D290F000B073E8 /* AccountDetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsModels.swift; sourceTree = "<group>"; };
 		5330F2DA23D290F000B073E8 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 		5330F2DB23D290F000B073E8 /* AccountDetailsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsBuilder.swift; sourceTree = "<group>"; };
+		5330F2E423D32D6A00B073E8 /* AccountDetailsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsMapper.swift; sourceTree = "<group>"; };
+		5330F2E623D32E5800B073E8 /* Decimal+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+String.swift"; sourceTree = "<group>"; };
+		5330F2E923D3390C00B073E8 /* SignMessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessagePresenter.swift; sourceTree = "<group>"; };
+		5330F2EA23D3390C00B073E8 /* SignMessageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessageRouter.swift; sourceTree = "<group>"; };
+		5330F2EB23D3390C00B073E8 /* SignMessageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessageModels.swift; sourceTree = "<group>"; };
+		5330F2EC23D3390C00B073E8 /* SignMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessageViewController.swift; sourceTree = "<group>"; };
+		5330F2ED23D3390C00B073E8 /* SignMessageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessageBuilder.swift; sourceTree = "<group>"; };
+		5330F2F423D33F5C00B073E8 /* VerifyMessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyMessagePresenter.swift; sourceTree = "<group>"; };
+		5330F2F523D33F5C00B073E8 /* VerifyMessageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyMessageRouter.swift; sourceTree = "<group>"; };
+		5330F2F623D33F5C00B073E8 /* VerifyMessageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyMessageModels.swift; sourceTree = "<group>"; };
+		5330F2F723D33F5C00B073E8 /* VerifyMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyMessageViewController.swift; sourceTree = "<group>"; };
+		5330F2F823D33F5C00B073E8 /* VerifyMessageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyMessageBuilder.swift; sourceTree = "<group>"; };
+		5330F2FF23D3490B00B073E8 /* SignMessageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessageWorker.swift; sourceTree = "<group>"; };
+		5330F30023D3490B00B073E8 /* SignMessageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessageInteractor.swift; sourceTree = "<group>"; };
+		5330F30423D357A500B073E8 /* SignatureDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureDetailsPresenter.swift; sourceTree = "<group>"; };
+		5330F30523D357A500B073E8 /* SignatureDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureDetailsRouter.swift; sourceTree = "<group>"; };
+		5330F30623D357A500B073E8 /* SignatureDetailsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureDetailsModels.swift; sourceTree = "<group>"; };
+		5330F30723D357A500B073E8 /* SignatureDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureDetailsViewController.swift; sourceTree = "<group>"; };
+		5330F30823D357A500B073E8 /* SignatureDetailsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureDetailsBuilder.swift; sourceTree = "<group>"; };
+		5330F30E23D35C1D00B073E8 /* SignatureDetailsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureDetailsMapper.swift; sourceTree = "<group>"; };
 		538541A223D0C07C007D5FF3 /* BaseInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
 		538541A323D0C07C007D5FF3 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		538541A423D0C07C007D5FF3 /* BaseBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBuilder.swift; sourceTree = "<group>"; };
@@ -352,8 +392,55 @@
 				5330F2D723D290F000B073E8 /* AccountDetailsPresenter.swift */,
 				5330F2DA23D290F000B073E8 /* AccountDetailsViewController.swift */,
 				5330F2D823D290F000B073E8 /* AccountDetailsRouter.swift */,
+				5330F2E423D32D6A00B073E8 /* AccountDetailsMapper.swift */,
 			);
 			path = AccountDetails;
+			sourceTree = "<group>";
+		};
+		5330F2E823D338F000B073E8 /* SignMessage */ = {
+			isa = PBXGroup;
+			children = (
+				5330F2ED23D3390C00B073E8 /* SignMessageBuilder.swift */,
+				5330F2EB23D3390C00B073E8 /* SignMessageModels.swift */,
+				5330F2E923D3390C00B073E8 /* SignMessagePresenter.swift */,
+				5330F2EC23D3390C00B073E8 /* SignMessageViewController.swift */,
+				5330F2EA23D3390C00B073E8 /* SignMessageRouter.swift */,
+			);
+			path = SignMessage;
+			sourceTree = "<group>";
+		};
+		5330F2F323D33F3000B073E8 /* VerifyMessage */ = {
+			isa = PBXGroup;
+			children = (
+				5330F2F823D33F5C00B073E8 /* VerifyMessageBuilder.swift */,
+				5330F2F623D33F5C00B073E8 /* VerifyMessageModels.swift */,
+				5330F2F423D33F5C00B073E8 /* VerifyMessagePresenter.swift */,
+				5330F2F723D33F5C00B073E8 /* VerifyMessageViewController.swift */,
+				5330F2F523D33F5C00B073E8 /* VerifyMessageRouter.swift */,
+			);
+			path = VerifyMessage;
+			sourceTree = "<group>";
+		};
+		5330F2FE23D348FB00B073E8 /* SignMessage */ = {
+			isa = PBXGroup;
+			children = (
+				5330F30023D3490B00B073E8 /* SignMessageInteractor.swift */,
+				5330F2FF23D3490B00B073E8 /* SignMessageWorker.swift */,
+			);
+			path = SignMessage;
+			sourceTree = "<group>";
+		};
+		5330F30323D3578900B073E8 /* SignatureDetails */ = {
+			isa = PBXGroup;
+			children = (
+				5330F30823D357A500B073E8 /* SignatureDetailsBuilder.swift */,
+				5330F30623D357A500B073E8 /* SignatureDetailsModels.swift */,
+				5330F30423D357A500B073E8 /* SignatureDetailsPresenter.swift */,
+				5330F30723D357A500B073E8 /* SignatureDetailsViewController.swift */,
+				5330F30523D357A500B073E8 /* SignatureDetailsRouter.swift */,
+				5330F30E23D35C1D00B073E8 /* SignatureDetailsMapper.swift */,
+			);
+			path = SignatureDetails;
 			sourceTree = "<group>";
 		};
 		5385419423D0BBA0007D5FF3 /* App */ = {
@@ -381,6 +468,7 @@
 		5385419623D0BBB9007D5FF3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5330F2FE23D348FB00B073E8 /* SignMessage */,
 				5330F2D123D2811000B073E8 /* SetupAccount */,
 				5330F25823D1DC2D00B073E8 /* Configuration */,
 				538541AE23D0C0A7007D5FF3 /* Splash */,
@@ -392,6 +480,9 @@
 		5385419723D0BBC2007D5FF3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5330F30323D3578900B073E8 /* SignatureDetails */,
+				5330F2F323D33F3000B073E8 /* VerifyMessage */,
+				5330F2E823D338F000B073E8 /* SignMessage */,
 				5330F2D623D2907A00B073E8 /* AccountDetails */,
 				5330F2C323D246D800B073E8 /* SetupAccount */,
 				538541A023D0BF93007D5FF3 /* Splash */,
@@ -446,6 +537,7 @@
 				5330F2BB23D2388800B073E8 /* Bundle+App.swift */,
 				5330F2BD23D2390F00B073E8 /* UIFont+AppTypo.swift */,
 				5330F2BF23D2397100B073E8 /* UIFont+App.swift */,
+				5330F2E623D32E5800B073E8 /* Decimal+String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -716,6 +808,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				538541B223D0C115007D5FF3 /* CheckStateWorker.swift in Sources */,
+				5330F2EE23D3390C00B073E8 /* SignMessagePresenter.swift in Sources */,
+				5330F30F23D35C1D00B073E8 /* SignatureDetailsMapper.swift in Sources */,
 				5330F25E23D1DDA100B073E8 /* String+Optional.swift in Sources */,
 				5330F25A23D1DC3C00B073E8 /* Constants.swift in Sources */,
 				538541AD23D0C07D007D5FF3 /* BaseWorker.swift in Sources */,
@@ -727,48 +821,66 @@
 				5330F2CB23D246FF00B073E8 /* SetupAccountModels.swift in Sources */,
 				5330F2BC23D2388800B073E8 /* Bundle+App.swift in Sources */,
 				5330F2D423D2812B00B073E8 /* SetupAccountWorker.swift in Sources */,
+				5330F2E723D32E5800B073E8 /* Decimal+String.swift in Sources */,
 				5330F29523D22FCA00B073E8 /* AppModels.swift in Sources */,
 				538541B723D0C11E007D5FF3 /* SplashBuilder.swift in Sources */,
 				5330F2C923D246FF00B073E8 /* SetupAccountPresenter.swift in Sources */,
 				538541AB23D0C07D007D5FF3 /* BaseRouter.swift in Sources */,
+				5330F2FB23D33F5C00B073E8 /* VerifyMessageModels.swift in Sources */,
 				5330F2B423D236CB00B073E8 /* CALayer+Sketch.swift in Sources */,
 				5330F2CA23D246FF00B073E8 /* SetupAccountRouter.swift in Sources */,
+				5330F2FC23D33F5C00B073E8 /* VerifyMessageViewController.swift in Sources */,
 				538541AA23D0C07D007D5FF3 /* BaseBuilder.swift in Sources */,
 				5330F26023D1DDA100B073E8 /* Error+Info.swift in Sources */,
 				5330F2A923D2357000B073E8 /* TopBarView.swift in Sources */,
 				538541B923D0C11E007D5FF3 /* SplashViewController.swift in Sources */,
 				538541A923D0C07D007D5FF3 /* BasePresenter.swift in Sources */,
+				5330F30123D3490B00B073E8 /* SignMessageWorker.swift in Sources */,
+				5330F30A23D357A500B073E8 /* SignatureDetailsRouter.swift in Sources */,
 				5330F25F23D1DDA100B073E8 /* URLRequest+curl.swift in Sources */,
 				5330F2B723D2374800B073E8 /* LOTTiming.swift in Sources */,
 				5330F2D523D2812B00B073E8 /* SetupAccountInteractor.swift in Sources */,
 				539CBE3423D0BA430031F6D2 /* AppDelegate.swift in Sources */,
 				5330F26723D1DE2800B073E8 /* ConfigurationBuilder.swift in Sources */,
 				538541BA23D0C11E007D5FF3 /* SplashRouter.swift in Sources */,
+				5330F2FA23D33F5C00B073E8 /* VerifyMessageRouter.swift in Sources */,
 				538541C123D0C2FB007D5FF3 /* UIViewController+NavigarionBar.swift in Sources */,
 				5330F26B23D1DF8300B073E8 /* Bundle+Info.swift in Sources */,
 				5330F2DC23D290F000B073E8 /* AccountDetailsPresenter.swift in Sources */,
 				538541B123D0C115007D5FF3 /* CheckStateInteractor.swift in Sources */,
+				5330F30B23D357A500B073E8 /* SignatureDetailsModels.swift in Sources */,
 				5330F2DF23D290F000B073E8 /* AccountDetailsViewController.swift in Sources */,
 				5330F2B023D2364000B073E8 /* PulseLayer.swift in Sources */,
 				5330F26523D1DE1100B073E8 /* Configuration.swift in Sources */,
 				5330F2CC23D246FF00B073E8 /* SetupAccountViewController.swift in Sources */,
 				538541AC23D0C07D007D5FF3 /* BaseViewController.swift in Sources */,
+				5330F30C23D357A500B073E8 /* SignatureDetailsViewController.swift in Sources */,
 				5330F2E023D290F000B073E8 /* AccountDetailsBuilder.swift in Sources */,
 				5330F2AB23D2358900B073E8 /* Label.swift in Sources */,
+				5330F2F023D3390C00B073E8 /* SignMessageModels.swift in Sources */,
 				5330F26323D1DDD300B073E8 /* Provider.swift in Sources */,
 				5330F2BE23D2390F00B073E8 /* UIFont+AppTypo.swift in Sources */,
 				5330F2B223D2368700B073E8 /* UIColor+App.swift in Sources */,
 				538541A823D0C07D007D5FF3 /* BaseInteractor.swift in Sources */,
+				5330F30223D3490B00B073E8 /* SignMessageInteractor.swift in Sources */,
+				5330F30D23D357A500B073E8 /* SignatureDetailsBuilder.swift in Sources */,
+				5330F2E523D32D6A00B073E8 /* AccountDetailsMapper.swift in Sources */,
 				5330F29B23D230B300B073E8 /* CodableXORKeychain.swift in Sources */,
 				538541B823D0C11E007D5FF3 /* SplashPresenter.swift in Sources */,
+				5330F2EF23D3390C00B073E8 /* SignMessageRouter.swift in Sources */,
+				5330F2F923D33F5C00B073E8 /* VerifyMessagePresenter.swift in Sources */,
 				5330F2DE23D290F000B073E8 /* AccountDetailsModels.swift in Sources */,
 				5330F2CD23D246FF00B073E8 /* SetupAccountBuilder.swift in Sources */,
+				5330F30923D357A500B073E8 /* SignatureDetailsPresenter.swift in Sources */,
 				5330F26923D1DF3100B073E8 /* UIApplication+Utils.swift in Sources */,
 				5330F29923D2308900B073E8 /* Keychain.swift in Sources */,
 				5330F2D023D24DCE00B073E8 /* TextField.swift in Sources */,
 				5330F2C023D2397100B073E8 /* UIFont+App.swift in Sources */,
 				5330F2AE23D235EE00B073E8 /* Button.swift in Sources */,
+				5330F2FD23D33F5C00B073E8 /* VerifyMessageBuilder.swift in Sources */,
+				5330F2F223D3390C00B073E8 /* SignMessageBuilder.swift in Sources */,
 				5330F2DD23D290F000B073E8 /* AccountDetailsRouter.swift in Sources */,
+				5330F2F123D3390C00B073E8 /* SignMessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,7 +21,7 @@ protocol SetupAccountPresenterProtocol: BasePresenterProtocol {
 
 final class SetupAccountPresenter<T: SetupAccountViewControllerProtocol, U: SetupAccountRouterProtocol>: BasePresenter<T, U> {
 
-    var setupAccountInteractor : SetupAccountInteractorProtocol
+    private var setupAccountInteractor : SetupAccountInteractorProtocol
     
     init(viewController: T, router: U, setupAccountInteractor: SetupAccountInteractorProtocol) {
         
@@ -44,7 +44,7 @@ extension SetupAccountPresenter: SetupAccountInteractorCallbackProtocol {
 
     func accoutObtained(accountDetails: AppModels.AccountDetails) {
         self.viewController.hideLoadingState()
-        print("Account address: \(accountDetails.address) Weis: \(accountDetails.ether)")
+        print("Account address: \(accountDetails.address) Ether: \(accountDetails.ether)")
         self.router.navigateToAccountDetails(accountDetails: accountDetails)
     }
     

@@ -39,8 +39,8 @@ public class Label: UILabel {
         public var color: UIColor {
             switch self {
             case .title1: return UIColor.appBlack
-            case .title2: return UIColor.appBlack
-            case .subtitle1: return UIColor.appDarkGrey
+            case .title2: return UIColor.appDarkGrey
+            case .subtitle1: return UIColor.appBlack
             case .body1: return UIColor.appDarkGrey
             default: return UIColor.appDarkGrey
             }
@@ -67,8 +67,6 @@ public class Label: UILabel {
             }
         }
     }
-    
-    public var underlined: Bool = false
     
     public var labelColor: UIColor? {
         didSet {
@@ -109,7 +107,6 @@ public class Label: UILabel {
         
         self.lineHeight = 1.3
         self.letterSpacing = 0.0
-        self.underlined = false
         super.init(frame: frame)
         
     }
@@ -120,7 +117,7 @@ public class Label: UILabel {
     
     private func updateStyle() {
         
-        lineBreakMode = .byTruncatingTail
+        lineBreakMode = .byTruncatingMiddle
         textColor = labelColor ?? style.color
         font = style.font
     }

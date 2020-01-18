@@ -9,16 +9,12 @@
 import Foundation
 import EthereumKit
 
-enum SetupAccountWorkerError: Error {
-    case storePrivateKeyError
-    case error
-}
-
 typealias SetupAccountWorkerAlias = BaseWorker<String, Result<AppModels.AccountDetails>>
 
 final class SetupAccountWorker: SetupAccountWorkerAlias {
 
     private let privateKeyKeychain: CodableKeychain<AppModels.PrivateKeyApp>
+    private var wallet: Wallet!
     
     init(privateKeyKeychain: CodableKeychain<AppModels.PrivateKeyApp> = PrivateKeyKeychainBuilder.build()) {
 
@@ -28,7 +24,7 @@ final class SetupAccountWorker: SetupAccountWorkerAlias {
     
     override func job(input: String, completion: @escaping ((Result<AppModels.AccountDetails>) -> Void)) {
         
-        let wallet = Wallet(network: .rinkeby, privateKey: input, debugPrints: true)
+        wallet = Wallet(network: .rinkeby, privateKey: input, debugPrints: provider.configuration.rinkeby.debugPrints)
 
         let configuration = Configuration(
             network: provider.configuration.rinkeby.network,
@@ -45,7 +41,7 @@ final class SetupAccountWorker: SetupAccountWorkerAlias {
             case .success(let balance):
                 do {
                     let ether = try balance.ether()
-                    self.store(account: AppModels.AccountDetails(address: wallet.address(), ether: ether),
+                    self.store(account: AppModels.AccountDetails(address: self.wallet.address(), ether: ether),
                     privateKey: AppModels.PrivateKeyApp(pritateKey: input),
                     andHandle: completion)
                 } catch {
