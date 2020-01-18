@@ -52,9 +52,9 @@ extension SplashPresenter: CheckStateInteractorCallbackProtocol {
     
     func userRegistered(_ registered: Bool) {
         if registered {
-            router.navigateToHome()
+            router.navigateToSetupAccount()
         } else {
-            router.navigateToMobileVerification()
+            router.navigateToSetupAccount()
         }
     }
 }

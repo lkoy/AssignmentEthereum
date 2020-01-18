@@ -7,13 +7,16 @@
 //
 
 import Foundation
+import EthereumKit
 
 struct AppConfiguration {
     
     let rinkeby: Rinkeby
     
     struct Rinkeby {
-        let apiUrl: String
-        let apiKey: String
+        let nodeEndpoint: String
+        let etherscanAPIKey: String
+        let network: Network
+        let debugPrints: Bool
     }
 }

@@ -1,9 +1,8 @@
 //
 //  URLRequest+curl.swift
-//  PipsApp
 //
 //  Created by Iglesias, Gustavo on 16/12/2019.
-//  Copyright © 2019 pips. All rights reserved.
+//  Copyright © 2019 ttg. All rights reserved.
 //
 
 import Foundation

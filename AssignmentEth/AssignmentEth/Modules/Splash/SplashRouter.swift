@@ -10,18 +10,13 @@ import Foundation
 
 protocol SplashRouterProtocol: BaseRouterProtocol {
 
-    func navigateToMobileVerification()
-    func navigateToHome()
+    func navigateToSetupAccount()
 }
 
 class SplashRouter: BaseRouter, SplashRouterProtocol {
     
-    func navigateToMobileVerification() {
-//        navigationController?.setViewControllers([MobileVerificationBuilder.build()], animated: true)
-//        navigationController?.setViewControllers([SelectBankBuilder.build()], animated: true)
-    }
-    
-    func navigateToHome() {
-//        navigationController?.setViewControllers([HomeBuilder.build()], animated: true)
+    func navigateToSetupAccount() {
+        
+        navigationController?.setViewControllers([SetupAccountBuilder.build()], animated: true)
     }
 }

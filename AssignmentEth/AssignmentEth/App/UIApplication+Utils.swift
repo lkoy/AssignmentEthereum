@@ -1,9 +1,8 @@
 //
 //  UIApplication+Utils.swift
-//  PipsApp
 //
 //  Created by Iglesias, Gustavo on 29/12/2019.
-//  Copyright © 2019 pips. All rights reserved.
+//  Copyright © 2019 ttg. All rights reserved.
 //
 
 import UIKit.UIApplication

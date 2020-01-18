@@ -8,7 +8,6 @@
 
 import UIKit
 import Lottie
-import EthereumKit
 
 final class SplashViewController: BaseViewController {
 
@@ -30,43 +29,6 @@ final class SplashViewController: BaseViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
-        let datadir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-
-        var error: NSError?
-
-        let wallet = Wallet(network: .rinkeby, privateKey: "30278911D6B6E8FB4D53AF9F4EBAF8B8BEA8D6752CCB1FC316E4EC861D87AFD9", debugPrints: true)
-
-        let dataKey = Data(hex: "30278911D6B6E8FB4D53AF9F4EBAF8B8BEA8D6752CCB1FC316E4EC861D87AFD9")
-
-        let publicKey = Crypto.generatePublicKey(data: dataKey, compressed: false)
-        print("Calculated Public key: \(publicKey.toHexString())")
-        print("Wallet Public key: \(wallet.publicKey().toHexString())")
-        let keccaked = Crypto.hashSHA3_256(publicKey.dropFirst()).suffix(20)
-
-        let accountAddress = EIP55.encode(keccaked)
-        print("Address Calculated: 0x\(accountAddress)")
-
-        print("Address: \(wallet.address())" )
-        let projectId = "0903bd90102540bb878e8d917778352a"
-        let projectSecret = "85d17c3df66a407aa1c72f7dbe2641d1"
-        let ribenkyNode = "rinkeby.infura.io/v3/0903bd90102540bb878e8d917778352a"
-        let etherscanApiKey = "TBQWJE1Z1Q8U4IBMTGMFN4RADS79Z36N8U"
-        
-        let configuration = Configuration(
-            network: .rinkeby,
-            nodeEndpoint: "https://rinkeby.infura.io/v3/0903bd90102540bb878e8d917778352a",
-            etherscanAPIKey: "TBQWJE1Z1Q8U4IBMTGMFN4RADS79Z36N8U",
-            debugPrints: true
-        )
-
-        let geth = Geth(configuration: configuration)
-
-        // To get a balance of an address, call `getBalance`.
-        geth.getBalance(of: wallet.address(), blockParameter: .latest) { result in
-            // Do something
-            print("Result: \(result)")
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

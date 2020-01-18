@@ -12,7 +12,10 @@ class ConfigurationBuilder {
     
     static func build() -> AppConfiguration {
         
-        let rinkeby = AppConfiguration.Rinkeby(apiUrl: "https://api.abanca.com/sandbox", apiKey: "6881a0b8-1c44-499e-b98b-c7c54f5ff889")
+        let rinkeby = AppConfiguration.Rinkeby(nodeEndpoint: "https://rinkeby.infura.io/v3/0903bd90102540bb878e8d917778352a",
+                                               etherscanAPIKey: "TBQWJE1Z1Q8U4IBMTGMFN4RADS79Z36N8U",
+                                               network: .rinkeby,
+                                               debugPrints: true)
         
         return AppConfiguration(rinkeby: rinkeby)
     }
