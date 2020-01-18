@@ -14,6 +14,8 @@ final class SignatureDetailsViewController: BaseViewController {
 
     var presenter: SignatureDetailsPresenterProtocol!
 
+    var userBrightness: CGFloat?
+    
     // MARK: - Component Declaration
 
     private enum ViewTraits {
@@ -21,6 +23,8 @@ final class SignatureDetailsViewController: BaseViewController {
         static let titleMargins = UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16)
         static let subtitleMargins = UIEdgeInsets(top: 8, left: 16, bottom: 16, right: 16)
         static let marginsBanner = UIEdgeInsets(top: 0, left: 15, bottom: 15, right: 15)
+        static let marginsQrCode = UIEdgeInsets(top: 60, left: 0, bottom: 15, right: 0)
+        static let qrCodeSize: CGFloat = 200.0
         static let cornerRadius: CGFloat = 4
     }
     
@@ -29,6 +33,7 @@ final class SignatureDetailsViewController: BaseViewController {
     private let textContainer = UIView()
     private let titleMessageLabel = Label(style: .title2)
     private let subtitleMessageLabel = Label(style: .subtitle1)
+    private var qrCodeImage: UIImageView!
     
     public enum AccessibilityIds {
         
@@ -49,7 +54,13 @@ final class SignatureDetailsViewController: BaseViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        startHandleScreenBrightness()
         self.presenter.prepareView()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        backToUserBrightness()
     }
     
     // MARK: - Setup
@@ -91,6 +102,10 @@ final class SignatureDetailsViewController: BaseViewController {
         subtitleMessageLabel.setContentHuggingPriority(.required, for: .vertical)
         subtitleMessageLabel.setContentCompressionResistancePriority(.required, for: .vertical)
         textContainer.addSubview(subtitleMessageLabel)
+        
+        qrCodeImage = UIImageView()
+        qrCodeImage.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(qrCodeImage)
     }
 
     override func setupConstraints() {
@@ -107,7 +122,6 @@ final class SignatureDetailsViewController: BaseViewController {
             textContainer.topAnchor.constraint(equalTo: contentView.topAnchor),
             textContainer.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             textContainer.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            textContainer.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
             titleMessageLabel.leadingAnchor.constraint(equalTo: textContainer.leadingAnchor, constant: ViewTraits.titleMargins.left),
             titleMessageLabel.trailingAnchor.constraint(equalTo: textContainer.trailingAnchor, constant: -ViewTraits.titleMargins.right),
@@ -117,6 +131,12 @@ final class SignatureDetailsViewController: BaseViewController {
             subtitleMessageLabel.leadingAnchor.constraint(equalTo: textContainer.leadingAnchor, constant: ViewTraits.subtitleMargins.left),
             subtitleMessageLabel.trailingAnchor.constraint(equalTo: textContainer.trailingAnchor, constant: -ViewTraits.subtitleMargins.right),
             subtitleMessageLabel.bottomAnchor.constraint(equalTo: textContainer.bottomAnchor, constant: -ViewTraits.subtitleMargins.bottom),
+            
+            qrCodeImage.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            qrCodeImage.topAnchor.constraint(equalTo: textContainer.bottomAnchor, constant: ViewTraits.marginsQrCode.top),
+            qrCodeImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -ViewTraits.marginsQrCode.bottom),
+            qrCodeImage.widthAnchor.constraint(equalToConstant: ViewTraits.qrCodeSize),
+            qrCodeImage.heightAnchor.constraint(equalToConstant: ViewTraits.qrCodeSize),
         ])
     }
     
@@ -128,6 +148,36 @@ final class SignatureDetailsViewController: BaseViewController {
 
     // MARK: Private Methods
 
+    // MARK: - ScreenBrightnes
+       func startHandleScreenBrightness() {
+            userBrightness = UIScreen.main.brightness
+            NotificationCenter.default.addObserver(self, selector: #selector(viewGoToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(comesFromBackground), name: UIApplication.didBecomeActiveNotification, object: nil)
+       }
+       
+       func backToUserBrightness() {
+           guard let brightness = userBrightness  else {
+                return
+           }
+           UIScreen.main.brightness = brightness
+           userBrightness = nil
+       }
+       
+       func highestBrightness() {
+        let state = UIApplication.shared.applicationState
+        if UIScreen.main.brightness < 1.0 && state != .background{
+               userBrightness = UIScreen.main.brightness
+           }
+           UIScreen.main.brightness = 1.0
+       }
+       
+       @objc func viewGoToBackground() {
+           backToUserBrightness()
+       }
+    
+        @objc func comesFromBackground() {
+            backToUserBrightness()
+        }
 }
 
 // MARK: - SignatureDetailsViewControllerProtocol
@@ -136,6 +186,8 @@ extension SignatureDetailsViewController: SignatureDetailsViewControllerProtocol
     func showDetails(_ details: SignatureDetails.ViewModel) {
         
         self.subtitleMessageLabel.text = details.messageValue
+        self.qrCodeImage.image = details.qrCodeImage
+        highestBrightness()
     }
 }
 

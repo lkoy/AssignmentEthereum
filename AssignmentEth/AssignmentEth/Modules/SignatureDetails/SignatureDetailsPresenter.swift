@@ -37,7 +37,7 @@ extension SignatureDetailsPresenter: SignatureDetailsPresenterProtocol {
 
     func prepareView() {
         
-        self.viewController.showDetails(self.mapper.map(details: self.signatureDetails))
+        self.viewController.showDetails(self.mapper.map(details: self.signatureDetails, barCodeImage: BarcodeGenerator().generate(code: self.signatureDetails.signedMessage)))
     }
     
     func backPressed() {

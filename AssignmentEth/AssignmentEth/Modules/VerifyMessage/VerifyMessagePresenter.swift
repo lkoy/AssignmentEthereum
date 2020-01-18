@@ -15,6 +15,7 @@ protocol VerifyMessageViewControllerProtocol: BaseViewControllerProtocol {
 protocol VerifyMessagePresenterProtocol: BasePresenterProtocol {
 
     func backPressed()
+    func verifyMessage(_ message: String)
 }
 
 final class VerifyMessagePresenter<T: VerifyMessageViewControllerProtocol, U: VerifyMessageRouterProtocol>: BasePresenter<T, U> {
@@ -29,5 +30,9 @@ extension VerifyMessagePresenter: VerifyMessagePresenterProtocol {
 
     func backPressed() {
         router.navigateBack()
+    }
+    
+    func verifyMessage(_ message: String) {
+        self.router.navigateToQRReader(withMessage: message)
     }
 }

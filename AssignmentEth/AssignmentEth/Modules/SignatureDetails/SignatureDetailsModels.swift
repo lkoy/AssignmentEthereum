@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import UIKit.UIImage
 
 enum SignatureDetails {
 
     struct ViewModel: Equatable {
         
         let messageValue: String
-        let signedMessageValue: String
+        let qrCodeImage: UIImage
     }
 }
