@@ -47,9 +47,9 @@ extension SignMessageInteractor: SignMessageInteractorProtocol {
             return
         }
         
-        let input = SignMessageParameters(privateKey: privateKey,
+        let params = SignMessageParameters(privateKey: privateKey,
                                           message: message)
-        self.worker.execute(input: input) { [weak self] (result) in
+        self.worker.execute(input: params) { [weak self] (result) in
             guard let self = self else { return }
             
             switch result {

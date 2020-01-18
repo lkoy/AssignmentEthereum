@@ -14,6 +14,8 @@ protocol QRCodeScannerViewControllerProtocol: BaseViewControllerProtocol {
     func askForCameraPermissions()
     func stopScanning()
     func startScanning()
+    func signatureValid()
+    func signatureInvalid()
 }
 
 protocol QRCodeScannerPresenterProtocol: BasePresenterProtocol {
@@ -28,10 +30,12 @@ final class QRCodeScannerPresenter<T: QRCodeScannerViewControllerProtocol, U: QR
 
     private let messageToVerify: String
     private var qrScanningInteractor: QrScanningInteractorProtocol!
+    private var verifyMessageInteractor: VerifyMessageInteractorProtocol!
     
-    init(viewController: T, router: U, message: String, qrScanningInteractor: QrScanningInteractorProtocol) {
+    init(viewController: T, router: U, message: String, qrScanningInteractor: QrScanningInteractorProtocol, verifyMessageInteractor: VerifyMessageInteractorProtocol) {
         
         self.qrScanningInteractor = qrScanningInteractor
+        self.verifyMessageInteractor = verifyMessageInteractor
         self.messageToVerify = message
         super.init(viewController: viewController, router: router)
     }
@@ -47,7 +51,7 @@ extension QRCodeScannerPresenter: QRCodeScannerPresenterProtocol {
     
     func readedQrs(_ qrs: [String]) {
         viewController.stopScanning()
-//        interactor.processQrs(qrs: qrs)
+        qrScanningInteractor.processQrs(qrs: qrs)
     }
     
     func viewAppear() {
@@ -76,10 +80,26 @@ extension QRCodeScannerPresenter: QrScanningInteractorCallbackProtocol {
     
     func foundQR(signature: String) {
         
-//        router.navigateToCompletion()
+        self.verifyMessageInteractor.verifyMessage(self.messageToVerify, signature: signature)
     }
     
     func invalidQr() {
         viewController.stopScanning()
         }
+}
+
+extension QRCodeScannerPresenter: VerifyMessageInteractorCallbackProtocol {
+    
+    func messageVerified(valid: Bool) {
+        
+        if valid {
+            self.viewController.signatureValid()
+        } else {
+            self.viewController.signatureInvalid()
+        }
+    }
+    
+    func show(error: VerifyMessageInteractorError) {
+        print("0000000")
+    }
 }

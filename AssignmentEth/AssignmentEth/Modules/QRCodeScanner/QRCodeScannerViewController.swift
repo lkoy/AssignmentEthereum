@@ -83,7 +83,7 @@ final class QRCodeScannerViewController: BaseViewController {
             videoPreview.topAnchor.constraint(equalTo: topBar.bottomAnchor, constant: ViewTraits.marginsVideo.top),
             videoPreview.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: ViewTraits.marginsVideo.left),
             videoPreview.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -ViewTraits.marginsVideo.right),
-            videoPreview.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -ViewTraits.marginsVideo.bottom)
+            videoPreview.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -ViewTraits.marginsVideo.bottom)
         ])
     }
     
@@ -174,6 +174,14 @@ extension QRCodeScannerViewController: QRCodeScannerViewControllerProtocol {
         
         let qrsReaded = mapQrs(metadataObjects)
         self.presenter.readedQrs(qrsReaded)
+    }
+    
+    func signatureValid() {
+        print("Signature valid")
+    }
+    
+    func signatureInvalid() {
+        print("Signature invalid")
     }
 }
 

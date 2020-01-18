@@ -39,10 +39,10 @@ class QrScanningInteractor: BaseInteractor {
 extension QrScanningInteractor: QrScanningInteractorProtocol {
 
     func processQrs(qrs: [String]) {
-        qrMapperWorker.execute(input: qrs) { [weak self] (pumps) in
+        qrMapperWorker.execute(input: qrs) { [weak self] (signature) in
             guard let self = self else { return }
-            if pumps.count == 1 {
-                self.presenter.foundQR(signature: "")
+            if signature.count > 0 {
+                self.presenter.foundQR(signature: signature)
             } else {
                 self.presenter.invalidQr()
             }

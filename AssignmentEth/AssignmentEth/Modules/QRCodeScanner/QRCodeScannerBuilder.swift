@@ -18,10 +18,12 @@ final class QRCodeScannerBuilder: BaseBuilder {
         let viewController: QRCodeScannerViewController = QRCodeScannerViewController()
         let router: QRCodeScannerRouter = QRCodeScannerRouter(viewController: viewController)
         let qrScanningInteractor = QrScanningInteractor(worker: QrMapperWorker(), camera: self.camera)
+        let verifyMessageInteractor = VerifyMessageInteractor()
         
-        let presenter: QRCodeScannerPresenter = QRCodeScannerPresenter(viewController: viewController, router: router, message: message, qrScanningInteractor: qrScanningInteractor)
+        let presenter: QRCodeScannerPresenter = QRCodeScannerPresenter(viewController: viewController, router: router, message: message, qrScanningInteractor: qrScanningInteractor, verifyMessageInteractor: verifyMessageInteractor)
         viewController.presenter = presenter
         qrScanningInteractor.presenter = presenter
+        verifyMessageInteractor.presenter = presenter
 
         return viewController
     }
