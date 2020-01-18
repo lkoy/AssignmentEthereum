@@ -10,14 +10,18 @@ import Foundation
 import UIKit.UIViewController
 
 final class QRCodeScannerBuilder: BaseBuilder {
+    
+    private var camera: CameraPermissionStatus = UIApplication.provider.camera
 
-    static func build(message: String) -> UIViewController {
+    func build(message: String) -> UIViewController {
 
         let viewController: QRCodeScannerViewController = QRCodeScannerViewController()
         let router: QRCodeScannerRouter = QRCodeScannerRouter(viewController: viewController)
+        let qrScanningInteractor = QrScanningInteractor(worker: QrMapperWorker(), camera: self.camera)
         
-        let presenter: QRCodeScannerPresenter = QRCodeScannerPresenter(viewController: viewController, router: router, message: message)
+        let presenter: QRCodeScannerPresenter = QRCodeScannerPresenter(viewController: viewController, router: router, message: message, qrScanningInteractor: qrScanningInteractor)
         viewController.presenter = presenter
+        qrScanningInteractor.presenter = presenter
 
         return viewController
     }

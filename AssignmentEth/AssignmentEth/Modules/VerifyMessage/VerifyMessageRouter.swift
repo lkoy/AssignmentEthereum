@@ -21,6 +21,6 @@ class VerifyMessageRouter: BaseRouter, VerifyMessageRouterProtocol {
     }
     
     func navigateToQRReader(withMessage message: String) {
-        navigationController?.pushViewController(QRCodeScannerBuilder.build(message: message), animated: true)
+        navigationController?.pushViewController(QRCodeScannerBuilder().build(message: message), animated: true)
     }
 }
