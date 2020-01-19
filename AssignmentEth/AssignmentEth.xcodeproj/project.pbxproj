@@ -287,13 +287,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5330F23023D111D900B073E8 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Dependencies;
-			sourceTree = "<group>";
-		};
 		5330F25823D1DC2D00B073E8 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -573,7 +566,6 @@
 		5385419923D0BBD7007D5FF3 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				5330F23023D111D900B073E8 /* Dependencies */,
 				5330F2A223D232F200B073E8 /* AssignmentEth-Bridging-Header.h */,
 				539CBE3F23D0BA440031F6D2 /* Info.plist */,
 				539CBE3C23D0BA440031F6D2 /* LaunchScreen.storyboard */,
@@ -1198,7 +1190,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/AssignmentEth/SupportingFiles/Dependencies",
 				);
 				INFOPLIST_FILE = AssignmentEth/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1226,7 +1217,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/AssignmentEth/SupportingFiles/Dependencies",
 				);
 				INFOPLIST_FILE = AssignmentEth/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

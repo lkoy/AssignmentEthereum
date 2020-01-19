@@ -186,7 +186,6 @@ public final class AlertDialogController: UIViewController {
             primaryAction = action
         case .secondary:
             secondaryAction = action
-        default:
             break
         }
     }

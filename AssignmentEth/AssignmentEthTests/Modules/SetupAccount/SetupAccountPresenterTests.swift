@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import Nimble
+//import Nimble
 @testable import AssignmentEth
 
 class SetupAccountPresenterTests: XCTestCase {

@@ -40,7 +40,7 @@ extension SetupAccountInteractor: SetupAccountInteractorProtocol {
             switch result {
             case .success(let accountDetails):
                 self.presenter.accoutObtained(accountDetails: accountDetails)
-            case .failure(let error):
+            case .failure:
                 self.presenter.showError()
             }
         }
