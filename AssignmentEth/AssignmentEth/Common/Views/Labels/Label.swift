@@ -60,9 +60,6 @@ public class Label: UILabel {
         }
     }
     
-    private var lineHeight: CGFloat
-    private var letterSpacing: CGFloat
-    
     public var style: Style = .body1 {
         didSet {
             if oldValue != style {
@@ -79,13 +76,6 @@ public class Label: UILabel {
         }
     }
     
-    private final var paragraphStyle: NSParagraphStyle {
-        let style = NSMutableParagraphStyle()
-        style.alignment = textAlignment
-        style.lineBreakMode = lineBreakMode
-        return style
-    }
-    
     override public var text: String? {
         set {
             if shouldUpdateText(old: text, new: newValue) {
@@ -96,22 +86,14 @@ public class Label: UILabel {
         get { return super.text }
     }
     
-    public convenience init(style: Style = .body1, text: String? = nil) {
+    public init(style: Style = .body1, text: String? = nil) {
         
-        self.init(frame: CGRect.zero)
+        super.init(frame: CGRect.zero)
         
         self.style = style
         self.text = text
         self.numberOfLines = 0
         updateStyle()
-    }
-    
-    private override init(frame: CGRect) {
-        
-        self.lineHeight = 1.3
-        self.letterSpacing = 0.0
-        super.init(frame: frame)
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
