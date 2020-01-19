@@ -109,6 +109,8 @@
 		53D9852F23D45C1300486046 /* loading_ethereum.json in Resources */ = {isa = PBXBuildFile; fileRef = 53D9852E23D45C1200486046 /* loading_ethereum.json */; };
 		53D9853223D45D7400486046 /* DialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9853123D45D7400486046 /* DialogController.swift */; };
 		53D9853423D45DA900486046 /* AlertDialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9853323D45DA900486046 /* AlertDialogController.swift */; };
+		53D9853A23D4A3E500486046 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9853923D4A3E500486046 /* Initializable.swift */; };
+		53D9853C23D4A42600486046 /* AppLaunchInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9853B23D4A42600486046 /* AppLaunchInitializer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -254,6 +256,8 @@
 		53D9852E23D45C1200486046 /* loading_ethereum.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading_ethereum.json; sourceTree = "<group>"; };
 		53D9853123D45D7400486046 /* DialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogController.swift; sourceTree = "<group>"; };
 		53D9853323D45DA900486046 /* AlertDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialogController.swift; sourceTree = "<group>"; };
+		53D9853923D4A3E500486046 /* Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializable.swift; sourceTree = "<group>"; };
+		53D9853B23D4A42600486046 /* AppLaunchInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchInitializer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -511,6 +515,7 @@
 		5385419423D0BBA0007D5FF3 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				53D9853823D4A3C800486046 /* Initializers */,
 				5330F26823D1DF3000B073E8 /* UIApplication+Utils.swift */,
 				5330F26123D1DDB600B073E8 /* Providers */,
 				539CBE3323D0BA430031F6D2 /* AppDelegate.swift */,
@@ -751,6 +756,15 @@
 			path = Dialogs;
 			sourceTree = "<group>";
 		};
+		53D9853823D4A3C800486046 /* Initializers */ = {
+			isa = PBXGroup;
+			children = (
+				53D9853923D4A3E500486046 /* Initializable.swift */,
+				53D9853B23D4A42600486046 /* AppLaunchInitializer.swift */,
+			);
+			path = Initializers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -935,6 +949,7 @@
 				5330F26B23D1DF8300B073E8 /* Bundle+Info.swift in Sources */,
 				5330F2DC23D290F000B073E8 /* AccountDetailsPresenter.swift in Sources */,
 				538541B123D0C115007D5FF3 /* CheckStateInteractor.swift in Sources */,
+				53D9853C23D4A42600486046 /* AppLaunchInitializer.swift in Sources */,
 				5330F30B23D357A500B073E8 /* SignatureDetailsModels.swift in Sources */,
 				5330F2DF23D290F000B073E8 /* AccountDetailsViewController.swift in Sources */,
 				5330F2B023D2364000B073E8 /* PulseLayer.swift in Sources */,
@@ -973,6 +988,7 @@
 				5330F2F223D3390C00B073E8 /* SignMessageBuilder.swift in Sources */,
 				5330F2DD23D290F000B073E8 /* AccountDetailsRouter.swift in Sources */,
 				5330F2F123D3390C00B073E8 /* SignMessageViewController.swift in Sources */,
+				53D9853A23D4A3E500486046 /* Initializable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
