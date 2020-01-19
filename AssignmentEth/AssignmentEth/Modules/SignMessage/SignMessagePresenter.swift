@@ -51,5 +51,6 @@ extension SignMessagePresenter: SignMessageInteractorCallbackProtocol {
     
     func show(error: SignMessageInteractorError) {
         
+        self.router.navigateToAlert(title: "Error", message: "An error occurred singing message.", primaryAction: nil)
     }
 }
