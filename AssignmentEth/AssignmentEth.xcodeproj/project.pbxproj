@@ -736,7 +736,7 @@
 		539CBE4723D0BA440031F6D2 /* AssignmentEthTests */ = {
 			isa = PBXGroup;
 			children = (
-				53D9854823D4C92800486046 /* Core */,
+				53E8D16F23D50620006111A7 /* Core */,
 				53D9854923D4C93100486046 /* Modules */,
 				539CBE4A23D0BA440031F6D2 /* Info.plist */,
 			);
@@ -770,14 +770,6 @@
 			path = Initializers;
 			sourceTree = "<group>";
 		};
-		53D9854823D4C92800486046 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				53D9854A23D4C97400486046 /* Models */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		53D9854923D4C93100486046 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -786,27 +778,35 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		53D9854A23D4C97400486046 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				53D9854B23D4C98600486046 /* Domain */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		53D9854B23D4C98600486046 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
 		53D9854C23D4C99F00486046 /* SetupAccount */ = {
 			isa = PBXGroup;
 			children = (
 				53D9854D23D4CA1500486046 /* SetupAccountPresenterTests.swift */,
 			);
 			path = SetupAccount;
+			sourceTree = "<group>";
+		};
+		53E8D16F23D50620006111A7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				53E8D17023D5062B006111A7 /* Models */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		53E8D17023D5062B006111A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				53E8D17123D50631006111A7 /* Domain */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		53E8D17123D50631006111A7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
