@@ -17,11 +17,11 @@ final class SplashViewController: BaseViewController {
     
     // MARK: - Component Declaration
     
-    private var animationView = LOTAnimationView(name: "loading-animation")
+    private var animationView = LOTAnimationView(name: "loading_ethereum")
     
     private enum ViewTraits {
         static let margins = UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
-        static let loadingsize: CGFloat = 80.0
+        static let loadingsize: CGFloat = 300.0
     }
 
     // MARK: - ViewLife Cycle

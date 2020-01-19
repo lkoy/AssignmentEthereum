@@ -13,6 +13,7 @@ public class Label: UILabel {
     public enum Style: CaseIterable {
         case title1
         case title2
+        case title3
         case subtitle1
         case body1
         case button
@@ -30,6 +31,7 @@ public class Label: UILabel {
             switch self {
             case .title1: return UIFont.title1
             case .title2: return UIFont.title2
+            case .title3: return UIFont.title3
             case .subtitle1: return UIFont.subtitle1
             case .body1: return UIFont.body1
             case .button: return UIFont.button
@@ -39,7 +41,7 @@ public class Label: UILabel {
         public var color: UIColor {
             switch self {
             case .title1: return UIColor.appBlack
-            case .title2: return UIColor.appDarkGrey
+            case .title2, .title3: return UIColor.appDarkGrey
             case .subtitle1: return UIColor.appBlack
             case .body1: return UIColor.appDarkGrey
             default: return UIColor.appDarkGrey
@@ -50,6 +52,7 @@ public class Label: UILabel {
             switch self {
             case .title1: return 30
             case .title2: return 15
+            case .title3: return 18
             case .subtitle1: return 16
             case .body1: return 16
             case .button: return 14

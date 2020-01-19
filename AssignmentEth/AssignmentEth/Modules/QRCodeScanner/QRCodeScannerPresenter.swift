@@ -94,12 +94,26 @@ extension QRCodeScannerPresenter: VerifyMessageInteractorCallbackProtocol {
         
         if valid {
             self.viewController.signatureValid()
+            self.router.navigateToAlert(title: "Result", message: "Signature valid", primaryAction: { [weak self] (_) in
+                guard let self = self else { return }
+                
+                self.viewController.startScanning()
+            })
         } else {
             self.viewController.signatureInvalid()
+            self.router.navigateToAlert(title: "Result", message: "Signature invalid", primaryAction: { [weak self] (_) in
+                guard let self = self else { return }
+                
+                self.viewController.startScanning()
+            })
         }
     }
     
     func show(error: VerifyMessageInteractorError) {
-        print("0000000")
+        self.router.navigateToAlert(title: "Error", message: "Signature not well formed", primaryAction: { [weak self] (_) in
+            guard let self = self else { return }
+            
+            self.viewController.startScanning()
+        })
     }
 }

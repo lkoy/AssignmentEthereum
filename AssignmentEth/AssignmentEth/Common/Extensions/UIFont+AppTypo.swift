@@ -14,6 +14,7 @@ extension UIFont {
     
     open class var title1: UIFont { return UIFont.boldAppFont(ofSize: Label.Style.title1.size) }
     open class var title2: UIFont { return UIFont.boldAppFont(ofSize: Label.Style.title2.size) }
+    open class var title3: UIFont { return UIFont.boldAppFont(ofSize: Label.Style.title3.size) }
     
     // MARK: - Subtitle
 

@@ -178,21 +178,12 @@ extension QRCodeScannerViewController: QRCodeScannerViewControllerProtocol {
     
     func signatureValid() {
         
-        let alert = UIAlertController(title: nil, message: "Signature valid", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
-            self.startScanning()
-        }))
-        self.present(alert, animated: true, completion: nil)
-        print("Signature valid")
+        self.view.backgroundColor = .appGreen
     }
     
     func signatureInvalid() {
-        let alert = UIAlertController(title: nil, message: "Signature invalid", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
-            self.startScanning()
-        }))
-        self.present(alert, animated: true, completion: nil)
-        print("Signature invalid")
+        
+        self.view.backgroundColor = .appRed
     }
 }
 
@@ -203,6 +194,7 @@ extension QRCodeScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
     }
     
     func startScanning() {
+        self.view.backgroundColor = .appWhite
         if AVCaptureDevice.authorizationStatus(for: AVMediaType.video) == .authorized {
             captureSession.startRunning()
         }

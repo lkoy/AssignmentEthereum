@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5330F23423D1208900B073E8 /* rinkeby.json in Resources */ = {isa = PBXBuildFile; fileRef = 5330F23323D1208900B073E8 /* rinkeby.json */; };
 		5330F25A23D1DC3C00B073E8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F25923D1DC3C00B073E8 /* Constants.swift */; };
 		5330F25E23D1DDA100B073E8 /* String+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F25B23D1DDA000B073E8 /* String+Optional.swift */; };
 		5330F25F23D1DDA100B073E8 /* URLRequest+curl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F25C23D1DDA100B073E8 /* URLRequest+curl.swift */; };
@@ -107,6 +106,9 @@
 		539CBE5423D0BA440031F6D2 /* AssignmentEthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539CBE5323D0BA440031F6D2 /* AssignmentEthUITests.swift */; };
 		53D9852223D3B23800486046 /* VerifyMessageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9852023D3B23800486046 /* VerifyMessageWorker.swift */; };
 		53D9852323D3B23800486046 /* VerifyMessageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9852123D3B23800486046 /* VerifyMessageInteractor.swift */; };
+		53D9852F23D45C1300486046 /* loading_ethereum.json in Resources */ = {isa = PBXBuildFile; fileRef = 53D9852E23D45C1200486046 /* loading_ethereum.json */; };
+		53D9853223D45D7400486046 /* DialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9853123D45D7400486046 /* DialogController.swift */; };
+		53D9853423D45DA900486046 /* AlertDialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9853323D45DA900486046 /* AlertDialogController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,7 +146,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5330F23323D1208900B073E8 /* rinkeby.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rinkeby.json; sourceTree = "<group>"; };
 		5330F23523D1357F00B073E8 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
 		5330F23623D1357F00B073E8 /* CryptoEthereumSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoEthereumSwift.framework; path = Carthage/Build/iOS/CryptoEthereumSwift.framework; sourceTree = "<group>"; };
 		5330F23723D1357F00B073E8 /* EthereumKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EthereumKit.framework; path = Carthage/Build/iOS/EthereumKit.framework; sourceTree = "<group>"; };
@@ -250,6 +251,9 @@
 		539CBE5523D0BA440031F6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53D9852023D3B23800486046 /* VerifyMessageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyMessageWorker.swift; sourceTree = "<group>"; };
 		53D9852123D3B23800486046 /* VerifyMessageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyMessageInteractor.swift; sourceTree = "<group>"; };
+		53D9852E23D45C1200486046 /* loading_ethereum.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading_ethereum.json; sourceTree = "<group>"; };
+		53D9853123D45D7400486046 /* DialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogController.swift; sourceTree = "<group>"; };
+		53D9853323D45DA900486046 /* AlertDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialogController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -473,13 +477,6 @@
 			path = BarCode;
 			sourceTree = "<group>";
 		};
-		53486A9923D375E10007729B /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Dependencies;
-			sourceTree = "<group>";
-		};
 		53486A9E23D37E2F0007729B /* QRCodeScanner */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,8 +561,6 @@
 		5385419823D0BBCD007D5FF3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				53486A9923D375E10007729B /* Dependencies */,
-				5330F23323D1208900B073E8 /* rinkeby.json */,
 				538541A123D0BFA4007D5FF3 /* Animations */,
 				539CBE3A23D0BA440031F6D2 /* Assets.xcassets */,
 			);
@@ -626,6 +621,7 @@
 		5385419D23D0BF1B007D5FF3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				53D9853023D45D5100486046 /* Dialogs */,
 				5330F2CE23D24DB800B073E8 /* TextFields */,
 				5330F2B523D2373800B073E8 /* Lottie */,
 				5330F2AC23D235D000B073E8 /* Button */,
@@ -665,6 +661,7 @@
 		538541A123D0BFA4007D5FF3 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				53D9852E23D45C1200486046 /* loading_ethereum.json */,
 				5330F2C123D246C100B073E8 /* loading_action_white.json */,
 				538541C223D0C35C007D5FF3 /* loading-animation.json */,
 			);
@@ -743,6 +740,15 @@
 				539CBE5523D0BA440031F6D2 /* Info.plist */,
 			);
 			path = AssignmentEthUITests;
+			sourceTree = "<group>";
+		};
+		53D9853023D45D5100486046 /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				53D9853123D45D7400486046 /* DialogController.swift */,
+				53D9853323D45DA900486046 /* AlertDialogController.swift */,
+			);
+			path = Dialogs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -851,8 +857,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5330F23423D1208900B073E8 /* rinkeby.json in Resources */,
 				5330F2C223D246C100B073E8 /* loading_action_white.json in Resources */,
+				53D9852F23D45C1300486046 /* loading_ethereum.json in Resources */,
 				539CBE3E23D0BA440031F6D2 /* LaunchScreen.storyboard in Resources */,
 				539CBE3B23D0BA440031F6D2 /* Assets.xcassets in Resources */,
 				538541C323D0C35C007D5FF3 /* loading-animation.json in Resources */,
@@ -907,6 +913,7 @@
 				5330F2CA23D246FF00B073E8 /* SetupAccountRouter.swift in Sources */,
 				5330F2FC23D33F5C00B073E8 /* VerifyMessageViewController.swift in Sources */,
 				538541AA23D0C07D007D5FF3 /* BaseBuilder.swift in Sources */,
+				53D9853223D45D7400486046 /* DialogController.swift in Sources */,
 				5330F26023D1DDA100B073E8 /* Error+Info.swift in Sources */,
 				5330F2A923D2357000B073E8 /* TopBarView.swift in Sources */,
 				538541B923D0C11E007D5FF3 /* SplashViewController.swift in Sources */,
@@ -917,6 +924,7 @@
 				5330F25F23D1DDA100B073E8 /* URLRequest+curl.swift in Sources */,
 				5330F31223D3651300B073E8 /* BarcodeGenerator.swift in Sources */,
 				5330F2B723D2374800B073E8 /* LOTTiming.swift in Sources */,
+				53D9853423D45DA900486046 /* AlertDialogController.swift in Sources */,
 				5330F2D523D2812B00B073E8 /* SetupAccountInteractor.swift in Sources */,
 				539CBE3423D0BA430031F6D2 /* AppDelegate.swift in Sources */,
 				5330F26723D1DE2800B073E8 /* ConfigurationBuilder.swift in Sources */,
