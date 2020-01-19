@@ -69,12 +69,6 @@ public class Button: UIControl, Pulseable {
     
     private let size: Size
     
-    public var elevated: Bool = false {
-        didSet {
-            layoutIfNeeded()
-        }
-    }
-    
     public var style: Style = .blue {
         didSet {
             if oldValue != style {
@@ -177,7 +171,6 @@ public class Button: UIControl, Pulseable {
     
     override public func layoutSubviews() {
         super.layoutSubviews()
-        elevated ? layer.applyShadow(ViewTraits.shadow) : layer.removeShadow()
     }
     
     func addCustomConstraints() {
@@ -288,28 +281,22 @@ public class Button: UIControl, Pulseable {
     // MARK: - Actions
     
     @objc func didTouchDownButton(sender: Any?, forEvent event: UIEvent) {
-        switch size {
-        case .image: elevated ? layer.applyShadow(ViewTraits.pressedShadow) : layer.removeShadow()
-        default: layer.removeShadow()
-        }
+        
+        layer.removeShadow()
         guard let touch = event.touches(for: self)?.first else { return }
         pulse?.start(centre: touch.location(in: self))
     }
     
     @objc func didTouchUpInsideButton(sender: Any?) {
+        
         pulse?.stop()
-        switch size {
-        case .image: elevated ? layer.applyShadow(ViewTraits.shadow) : layer.removeShadow()
-        default: layer.removeShadow()
-        }
+        layer.removeShadow()
     }
     
     @objc func didTouchCancelButton(sender: Any?) {
+        
         pulse?.stop()
-        switch size {
-        case .image: elevated ? layer.applyShadow(ViewTraits.shadow) : layer.removeShadow()
-        default: layer.removeShadow()
-        }
+        layer.removeShadow()
     }
     
 }
