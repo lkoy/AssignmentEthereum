@@ -110,6 +110,8 @@
 		53D9853A23D4A3E500486046 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9853923D4A3E500486046 /* Initializable.swift */; };
 		53D9853C23D4A42600486046 /* AppLaunchInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9853B23D4A42600486046 /* AppLaunchInitializer.swift */; };
 		53D9854E23D4CA1500486046 /* SetupAccountPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9854D23D4CA1500486046 /* SetupAccountPresenterTests.swift */; };
+		53E8D16C23D4DFCE006111A7 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E8D16923D4DFC6006111A7 /* Nimble.framework */; };
+		53E8D16E23D4E073006111A7 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53E8D16923D4DFC6006111A7 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,16 @@
 				538541BE23D0C29E007D5FF3 /* Lottie.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53E8D16D23D4E053006111A7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				53E8D16E23D4E073006111A7 /* Nimble.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -256,6 +268,7 @@
 		53D9853923D4A3E500486046 /* Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializable.swift; sourceTree = "<group>"; };
 		53D9853B23D4A42600486046 /* AppLaunchInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchInitializer.swift; sourceTree = "<group>"; };
 		53D9854D23D4CA1500486046 /* SetupAccountPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAccountPresenterTests.swift; sourceTree = "<group>"; };
+		53E8D16923D4DFC6006111A7 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +287,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53E8D16C23D4DFCE006111A7 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +688,7 @@
 		538541BB23D0C29D007D5FF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				53E8D16923D4DFC6006111A7 /* Nimble.framework */,
 				5330F26C23D1EF2400B073E8 /* EthereumKit.framework.dSYM */,
 				5330F25523D1DAC800B073E8 /* Alamofire.framework */,
 				5330F23623D1357F00B073E8 /* CryptoEthereumSwift.framework */,
@@ -822,6 +837,7 @@
 				539CBE4023D0BA440031F6D2 /* Sources */,
 				539CBE4123D0BA440031F6D2 /* Frameworks */,
 				539CBE4223D0BA440031F6D2 /* Resources */,
+				53E8D16D23D4E053006111A7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
