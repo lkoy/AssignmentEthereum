@@ -16,7 +16,7 @@ extension UIColor {
     open class var appGreen: UIColor { return UIColor(red: 0.42, green: 0.73, blue: 0.62, alpha: 1.0) }
     open class var appRed: UIColor { return UIColor(red: 0.97, green: 0.49, blue: 0.49, alpha: 1.0) }
     open class var appViolet: UIColor { return UIColor(red: 0.60, green: 0.30, blue: 0.90, alpha: 1.0) }
-    open class var appBlue: UIColor { return UIColor(red:0.16, green:0.41, blue:0.84, alpha:1.0) }
+    open class var appBlue: UIColor { return UIColor(red:0.46, green:0.71, blue:0.74, alpha:1.0) }
     open class var appWhite: UIColor { return UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0) }
     open class var appYellow: UIColor { return UIColor(red:1.00, green:0.80, blue:0.00, alpha:1.0) }
     open class var appBlack: UIColor { return UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0) }

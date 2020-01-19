@@ -101,7 +101,6 @@
 		539CBE3423D0BA430031F6D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539CBE3323D0BA430031F6D2 /* AppDelegate.swift */; };
 		539CBE3B23D0BA440031F6D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 539CBE3A23D0BA440031F6D2 /* Assets.xcassets */; };
 		539CBE3E23D0BA440031F6D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539CBE3C23D0BA440031F6D2 /* LaunchScreen.storyboard */; };
-		539CBE4923D0BA440031F6D2 /* AssignmentEthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539CBE4823D0BA440031F6D2 /* AssignmentEthTests.swift */; };
 		539CBE5423D0BA440031F6D2 /* AssignmentEthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539CBE5323D0BA440031F6D2 /* AssignmentEthUITests.swift */; };
 		53D9852223D3B23800486046 /* VerifyMessageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9852023D3B23800486046 /* VerifyMessageWorker.swift */; };
 		53D9852323D3B23800486046 /* VerifyMessageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9852123D3B23800486046 /* VerifyMessageInteractor.swift */; };
@@ -110,6 +109,7 @@
 		53D9853423D45DA900486046 /* AlertDialogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9853323D45DA900486046 /* AlertDialogController.swift */; };
 		53D9853A23D4A3E500486046 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9853923D4A3E500486046 /* Initializable.swift */; };
 		53D9853C23D4A42600486046 /* AppLaunchInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9853B23D4A42600486046 /* AppLaunchInitializer.swift */; };
+		53D9854E23D4CA1500486046 /* SetupAccountPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9854D23D4CA1500486046 /* SetupAccountPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,7 +244,6 @@
 		539CBE3D23D0BA440031F6D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		539CBE3F23D0BA440031F6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		539CBE4423D0BA440031F6D2 /* AssignmentEthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentEthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		539CBE4823D0BA440031F6D2 /* AssignmentEthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentEthTests.swift; sourceTree = "<group>"; };
 		539CBE4A23D0BA440031F6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		539CBE4F23D0BA440031F6D2 /* AssignmentEthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentEthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		539CBE5323D0BA440031F6D2 /* AssignmentEthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentEthUITests.swift; sourceTree = "<group>"; };
@@ -256,6 +255,7 @@
 		53D9853323D45DA900486046 /* AlertDialogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialogController.swift; sourceTree = "<group>"; };
 		53D9853923D4A3E500486046 /* Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializable.swift; sourceTree = "<group>"; };
 		53D9853B23D4A42600486046 /* AppLaunchInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchInitializer.swift; sourceTree = "<group>"; };
+		53D9854D23D4CA1500486046 /* SetupAccountPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAccountPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -729,7 +729,8 @@
 		539CBE4723D0BA440031F6D2 /* AssignmentEthTests */ = {
 			isa = PBXGroup;
 			children = (
-				539CBE4823D0BA440031F6D2 /* AssignmentEthTests.swift */,
+				53D9854823D4C92800486046 /* Core */,
+				53D9854923D4C93100486046 /* Modules */,
 				539CBE4A23D0BA440031F6D2 /* Info.plist */,
 			);
 			path = AssignmentEthTests;
@@ -760,6 +761,45 @@
 				53D9853B23D4A42600486046 /* AppLaunchInitializer.swift */,
 			);
 			path = Initializers;
+			sourceTree = "<group>";
+		};
+		53D9854823D4C92800486046 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				53D9854A23D4C97400486046 /* Models */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		53D9854923D4C93100486046 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				53D9854C23D4C99F00486046 /* SetupAccount */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		53D9854A23D4C97400486046 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				53D9854B23D4C98600486046 /* Domain */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		53D9854B23D4C98600486046 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		53D9854C23D4C99F00486046 /* SetupAccount */ = {
+			isa = PBXGroup;
+			children = (
+				53D9854D23D4CA1500486046 /* SetupAccountPresenterTests.swift */,
+			);
+			path = SetupAccount;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -992,7 +1032,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				539CBE4923D0BA440031F6D2 /* AssignmentEthTests.swift in Sources */,
+				53D9854E23D4CA1500486046 /* SetupAccountPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1209,6 +1249,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 26253PT2DN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AssignmentEthTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1217,6 +1261,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttg.AssignmentEthTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AssignmentEth/SupportingFiles/AssignmentEth-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AssignmentEth.app/AssignmentEth";
@@ -1230,6 +1275,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 26253PT2DN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AssignmentEthTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1238,6 +1287,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttg.AssignmentEthTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AssignmentEth/SupportingFiles/AssignmentEth-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AssignmentEth.app/AssignmentEth";
@@ -1258,6 +1308,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttg.AssignmentEthUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AssignmentEth/SupportingFiles/AssignmentEth-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = AssignmentEth;
@@ -1278,6 +1329,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttg.AssignmentEthUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AssignmentEth/SupportingFiles/AssignmentEth-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = AssignmentEth;

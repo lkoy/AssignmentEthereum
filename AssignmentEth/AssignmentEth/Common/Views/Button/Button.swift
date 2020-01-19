@@ -24,7 +24,7 @@ public class Button: UIControl, Pulseable {
     }
     
     public enum Style: Int, CaseIterable {
-        case violet
+        case blue
         case image
         
         public var name: String { return String(describing: self).capitalized }
@@ -75,7 +75,7 @@ public class Button: UIControl, Pulseable {
         }
     }
     
-    public var style: Style = .violet {
+    public var style: Style = .blue {
         didSet {
             if oldValue != style {
                 reloadStyle()
@@ -117,7 +117,7 @@ public class Button: UIControl, Pulseable {
         }
     }
     
-    public convenience init(style: Style = .violet, size: Size = .regular, enabled: Bool = true) {
+    public convenience init(style: Style = .blue, size: Size = .regular, enabled: Bool = true) {
         self.init(frame: CGRect.zero, size: size)
         
         self.loadingTiming = LOTTiming(inFrames: LOTTiming.InFrames(to: 38), loopFrames: LOTTiming.LoopFrames(from: 38, to: 146))
@@ -238,9 +238,9 @@ public class Button: UIControl, Pulseable {
         
         switch style {
             
-        case .violet:
+        case .blue:
             layer.borderWidth = 0
-            backgroundColor = isEnabled ? .appViolet : .appDarkGrey
+            backgroundColor = isEnabled ? .appBlue : .appDarkGrey
             titleLabel.style = size.labelStyle
             titleLabel.labelColor = isEnabled ? .appWhite : UIColor.appBlack.withAlphaComponent(0.5)
             pulse?.tint = UIColor.white

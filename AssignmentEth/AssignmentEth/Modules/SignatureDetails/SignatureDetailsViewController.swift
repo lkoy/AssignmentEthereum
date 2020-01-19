@@ -23,7 +23,7 @@ final class SignatureDetailsViewController: BaseViewController {
         static let titleMargins = UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16)
         static let subtitleMargins = UIEdgeInsets(top: 8, left: 16, bottom: 16, right: 16)
         static let marginsBanner = UIEdgeInsets(top: 0, left: 15, bottom: 15, right: 15)
-        static let marginsQrCode = UIEdgeInsets(top: 60, left: 0, bottom: 15, right: 0)
+        static let marginsQrCode = UIEdgeInsets(top: 40, left: 0, bottom: 40, right: 0)
         static let qrCodeSize: CGFloat = 200.0
         static let cornerRadius: CGFloat = 4
     }
@@ -79,7 +79,7 @@ final class SignatureDetailsViewController: BaseViewController {
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = ViewTraits.cornerRadius
         contentView.layer.borderWidth = 1
-        contentView.layer.borderColor = UIColor.appViolet.cgColor
+        contentView.layer.borderColor = UIColor.appBlue.cgColor
         view.addSubview(contentView)
         
         textContainer.translatesAutoresizingMaskIntoConstraints = false

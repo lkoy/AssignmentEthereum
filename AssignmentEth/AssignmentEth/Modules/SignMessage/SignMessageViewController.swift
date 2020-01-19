@@ -77,7 +77,7 @@ final class SignMessageViewController: BaseViewController {
         messageField.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(messageField)
         
-        signButton = Button(style: .violet)
+        signButton = Button(style: .blue)
         signButton.title = "Sign message"
         signButton.addTarget(self, action: #selector(signMessageTapped), for: .touchUpInside)
         signButton.translatesAutoresizingMaskIntoConstraints = false

@@ -29,9 +29,9 @@ public final class AlertDialogController: UIViewController {
     private var messageLabel: Label?
     private let buttonsStackView = UIStackView()
     private var primaryAction: DialogAction?
-    private let primaryButton = Button(style: .violet)
+    private let primaryButton = Button(style: .blue)
     private var secondaryAction: DialogAction?
-    private let secondaryButton = Button(style: .violet)
+    private let secondaryButton = Button(style: .blue)
     private var tracker: DialogTracker?
     var isDismissable: Bool = true
     var isDismisableWithTappingOut: Bool = false

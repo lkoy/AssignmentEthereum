@@ -84,7 +84,7 @@ public class TextField: UIView {
             case .normal:
                 titleLabel.textColor = .appDarkGrey
                 titleLabel.alpha = 1
-                lineView.backgroundColor = .appViolet
+                lineView.backgroundColor = .appBlue
                 textField.isUserInteractionEnabled = true
             case .error:
                 titleLabel.textColor = .red

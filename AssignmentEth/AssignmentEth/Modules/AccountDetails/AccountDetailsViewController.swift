@@ -72,7 +72,7 @@ final class AccountDetailsViewController: BaseViewController {
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = ViewTraits.cornerRadius
         contentView.layer.borderWidth = 1
-        contentView.layer.borderColor = UIColor.appViolet.cgColor
+        contentView.layer.borderColor = UIColor.appBlue.cgColor
         view.addSubview(contentView)
         
         textContainer.translatesAutoresizingMaskIntoConstraints = false
@@ -111,13 +111,13 @@ final class AccountDetailsViewController: BaseViewController {
         subtitleBalanceLabel.setContentCompressionResistancePriority(.required, for: .vertical)
         textContainer.addSubview(subtitleBalanceLabel)
         
-        signButton = Button(style: .violet)
+        signButton = Button(style: .blue)
         signButton.title = "Sign"
         signButton.addTarget(self, action: #selector(signTapped), for: .touchUpInside)
         signButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(signButton)
         
-        verifyButton = Button(style: .violet)
+        verifyButton = Button(style: .blue)
         verifyButton.title = "Verify"
         verifyButton.addTarget(self, action: #selector(verificationTapped), for: .touchUpInside)
         verifyButton.translatesAutoresizingMaskIntoConstraints = false

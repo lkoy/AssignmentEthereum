@@ -82,7 +82,7 @@ final class SetupAccountViewController: BaseViewController {
         privateKeyField.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(privateKeyField)
         
-        confirmButton = Button(style: .violet)
+        confirmButton = Button(style: .blue)
         confirmButton.title = "Continue"
         confirmButton.addTarget(self, action: #selector(confirmTapped), for: .touchUpInside)
         confirmButton.translatesAutoresizingMaskIntoConstraints = false

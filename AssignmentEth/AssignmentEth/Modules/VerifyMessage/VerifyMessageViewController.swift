@@ -77,7 +77,7 @@ final class VerifyMessageViewController: BaseViewController {
         messageField.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(messageField)
         
-        verifyButton = Button(style: .violet)
+        verifyButton = Button(style: .blue)
         verifyButton.title = "Verify message"
         verifyButton.addTarget(self, action: #selector(verifyMessageTapped), for: .touchUpInside)
         verifyButton.translatesAutoresizingMaskIntoConstraints = false

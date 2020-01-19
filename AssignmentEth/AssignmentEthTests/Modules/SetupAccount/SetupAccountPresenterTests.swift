@@ -1,15 +1,16 @@
 //
-//  AssignmentEthTests.swift
+//  SetupAccountPresenterTests.swift
 //  AssignmentEthTests
 //
-//  Created by Iglesias, Gustavo on 16/01/2020.
+//  Created by Iglesias, Gustavo on 19/01/2020.
 //  Copyright © 2020 ttg. All rights reserved.
 //
 
 import XCTest
+import Nimble
 @testable import AssignmentEth
 
-class AssignmentEthTests: XCTestCase {
+class SetupAccountPresenterTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
