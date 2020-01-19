@@ -7,7 +7,7 @@
 //
 
 import XCTest
-//import Nimble
+import Nimble
 @testable import AssignmentEth
 
 class SetupAccountPresenterTests: XCTestCase {
@@ -23,6 +23,7 @@ class SetupAccountPresenterTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        expect("seahorse").to(contain("sea"))
     }
 
     func testPerformanceExample() {
