@@ -21,7 +21,6 @@ final class VerifyMessageViewController: BaseViewController {
         static let marginsField = UIEdgeInsets(top: 0, left: 15, bottom: 10, right: 15)
         static let spacing: CGFloat = 16.0
         static let buttonWidth: CGFloat = 160.0
-        static let buttonHeight: CGFloat = 40.0
         static let marginsTopBar = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 0)
     }
     
@@ -98,7 +97,6 @@ final class VerifyMessageViewController: BaseViewController {
             messageField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -ViewTraits.marginsField.right),
             
             verifyButton.widthAnchor.constraint(equalToConstant: ViewTraits.buttonWidth),
-            verifyButton.heightAnchor.constraint(equalToConstant: ViewTraits.buttonHeight),
             verifyButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             bottomConstraint
         ])

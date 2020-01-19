@@ -22,7 +22,6 @@ final class SignMessageViewController: BaseViewController {
         static let marginsField = UIEdgeInsets(top: 0, left: 15, bottom: 10, right: 15)
         static let spacing: CGFloat = 16.0
         static let buttonWidth: CGFloat = 160.0
-        static let buttonHeight: CGFloat = 40.0
     }
     
     private var topBar: TopBarView!
@@ -98,7 +97,6 @@ final class SignMessageViewController: BaseViewController {
             messageField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -ViewTraits.marginsField.right),
             
             signButton.widthAnchor.constraint(equalToConstant: ViewTraits.buttonWidth),
-            signButton.heightAnchor.constraint(equalToConstant: ViewTraits.buttonHeight),
             signButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             bottomConstraint
         ])

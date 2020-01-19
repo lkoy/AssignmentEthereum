@@ -32,7 +32,7 @@ public final class TopBarView: UIView {
     private let contentView = UIView()
     
     private let button: Button = {
-        let btn = Button(style: .image)
+        let btn = Button(style: .image, size: .image)
         btn.imageName = "back_icon"
         return btn
     }()
@@ -109,7 +109,6 @@ public final class TopBarView: UIView {
             
             button.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: -ViewTraits.buttonMargins.left),
             button.widthAnchor.constraint(equalToConstant: ViewTraits.buttonSize),
-            button.heightAnchor.constraint(equalToConstant: ViewTraits.buttonSize),
             button.topAnchor.constraint(equalTo: contentView.topAnchor),
             
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),

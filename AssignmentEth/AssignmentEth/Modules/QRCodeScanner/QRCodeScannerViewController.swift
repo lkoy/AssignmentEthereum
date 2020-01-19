@@ -24,7 +24,7 @@ final class QRCodeScannerViewController: BaseViewController {
 
     private enum ViewTraits {
         static let marginsTopBar = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 0)
-        static let marginsVideo = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        static let marginsVideo = UIEdgeInsets(top: 0, left: 15, bottom: 15, right: 15)
     }
     
     private var topBar: TopBarView!

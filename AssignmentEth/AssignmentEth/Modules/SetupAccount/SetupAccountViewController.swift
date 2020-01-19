@@ -22,7 +22,6 @@ final class SetupAccountViewController: BaseViewController {
         static let marginsField = UIEdgeInsets(top: 0, left: 15, bottom: 10, right: 15)
         static let spacing: CGFloat = 16.0
         static let buttonWidth: CGFloat = 120.0
-        static let buttonHeight: CGFloat = 40.0
     }
     
     private var topBar: TopBarView!
@@ -103,7 +102,6 @@ final class SetupAccountViewController: BaseViewController {
             privateKeyField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -ViewTraits.marginsField.right),
             
             confirmButton.widthAnchor.constraint(equalToConstant: ViewTraits.buttonWidth),
-            confirmButton.heightAnchor.constraint(equalToConstant: ViewTraits.buttonHeight),
             confirmButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             bottomConstraint
         ])

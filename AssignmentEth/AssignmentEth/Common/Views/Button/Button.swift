@@ -13,12 +13,11 @@ public class Button: UIControl, Pulseable {
     
     public enum Size {
         case regular
-        case mini
+        case image
         
         var labelStyle: Label.Style {
             switch self {
-            case .mini: return .body1
-            case .regular: return .button
+            case .regular, .image: return .button
             }
         }
         
@@ -37,9 +36,9 @@ public class Button: UIControl, Pulseable {
         static let imageMargins = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         static let miniMargins = UIEdgeInsets(top: 0, left: 16, bottom: -2, right: 16)
         static let minWidth: CGFloat = 96
-        static let miniMinWidth: CGFloat = 80
         static let height: CGFloat = 36
-        static let miniHeight: CGFloat = 32
+        static let imageHeight: CGFloat = 40
+        static let imageWidth: CGFloat = 40
         static let leadingLoading: CGFloat = 4
         static let borderRadius: CGFloat = 4
         static let shadow: CALayer.Shadow = .dp4
@@ -192,11 +191,11 @@ public class Button: UIControl, Pulseable {
         var bottom: CGFloat!
         
         switch size {
-        case .mini:
-            height = ViewTraits.miniHeight
-            width = ViewTraits.miniMinWidth
-            top = ViewTraits.miniMargins.top
-            bottom = ViewTraits.miniMargins.bottom
+        case .image:
+            height = ViewTraits.imageHeight
+            width = ViewTraits.imageWidth
+            top = ViewTraits.margins.top
+            bottom = ViewTraits.margins.bottom
             heightAnchor.constraint(equalToConstant: height).isActive = true
         case .regular:
             height = ViewTraits.height
@@ -234,8 +233,7 @@ public class Button: UIControl, Pulseable {
     private func reloadStyle() {
         var margins: UIEdgeInsets!
         switch size {
-        case .mini: margins = ViewTraits.miniMargins
-        case .regular: margins = ViewTraits.margins
+        case .regular, .image: margins = ViewTraits.margins
         }
         
         switch style {
@@ -291,7 +289,7 @@ public class Button: UIControl, Pulseable {
     
     @objc func didTouchDownButton(sender: Any?, forEvent event: UIEvent) {
         switch size {
-        case .mini: elevated ? layer.applyShadow(ViewTraits.pressedShadow) : layer.removeShadow()
+        case .image: elevated ? layer.applyShadow(ViewTraits.pressedShadow) : layer.removeShadow()
         default: layer.removeShadow()
         }
         guard let touch = event.touches(for: self)?.first else { return }
@@ -301,7 +299,7 @@ public class Button: UIControl, Pulseable {
     @objc func didTouchUpInsideButton(sender: Any?) {
         pulse?.stop()
         switch size {
-        case .mini: elevated ? layer.applyShadow(ViewTraits.shadow) : layer.removeShadow()
+        case .image: elevated ? layer.applyShadow(ViewTraits.shadow) : layer.removeShadow()
         default: layer.removeShadow()
         }
     }
@@ -309,7 +307,7 @@ public class Button: UIControl, Pulseable {
     @objc func didTouchCancelButton(sender: Any?) {
         pulse?.stop()
         switch size {
-        case .mini: elevated ? layer.applyShadow(ViewTraits.shadow) : layer.removeShadow()
+        case .image: elevated ? layer.applyShadow(ViewTraits.shadow) : layer.removeShadow()
         default: layer.removeShadow()
         }
     }

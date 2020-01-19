@@ -98,7 +98,6 @@
 		538541BD23D0C29E007D5FF3 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 538541BC23D0C29E007D5FF3 /* Lottie.framework */; };
 		538541BE23D0C29E007D5FF3 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 538541BC23D0C29E007D5FF3 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		538541C123D0C2FB007D5FF3 /* UIViewController+NavigarionBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538541C023D0C2FB007D5FF3 /* UIViewController+NavigarionBar.swift */; };
-		538541C323D0C35C007D5FF3 /* loading-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 538541C223D0C35C007D5FF3 /* loading-animation.json */; };
 		539CBE3423D0BA430031F6D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539CBE3323D0BA430031F6D2 /* AppDelegate.swift */; };
 		539CBE3B23D0BA440031F6D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 539CBE3A23D0BA440031F6D2 /* Assets.xcassets */; };
 		539CBE3E23D0BA440031F6D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 539CBE3C23D0BA440031F6D2 /* LaunchScreen.storyboard */; };
@@ -239,7 +238,6 @@
 		538541B623D0C11E007D5FF3 /* SplashRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashRouter.swift; sourceTree = "<group>"; };
 		538541BC23D0C29E007D5FF3 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		538541C023D0C2FB007D5FF3 /* UIViewController+NavigarionBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigarionBar.swift"; sourceTree = "<group>"; };
-		538541C223D0C35C007D5FF3 /* loading-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "loading-animation.json"; sourceTree = "<group>"; };
 		539CBE3023D0BA430031F6D2 /* AssignmentEth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentEth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		539CBE3323D0BA430031F6D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		539CBE3A23D0BA440031F6D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -516,8 +514,8 @@
 			isa = PBXGroup;
 			children = (
 				53D9853823D4A3C800486046 /* Initializers */,
-				5330F26823D1DF3000B073E8 /* UIApplication+Utils.swift */,
 				5330F26123D1DDB600B073E8 /* Providers */,
+				5330F26823D1DF3000B073E8 /* UIApplication+Utils.swift */,
 				539CBE3323D0BA430031F6D2 /* AppDelegate.swift */,
 			);
 			path = App;
@@ -668,7 +666,6 @@
 			children = (
 				53D9852E23D45C1200486046 /* loading_ethereum.json */,
 				5330F2C123D246C100B073E8 /* loading_action_white.json */,
-				538541C223D0C35C007D5FF3 /* loading-animation.json */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -875,7 +872,6 @@
 				53D9852F23D45C1300486046 /* loading_ethereum.json in Resources */,
 				539CBE3E23D0BA440031F6D2 /* LaunchScreen.storyboard in Resources */,
 				539CBE3B23D0BA440031F6D2 /* Assets.xcassets in Resources */,
-				538541C323D0C35C007D5FF3 /* loading-animation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

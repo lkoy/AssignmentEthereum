@@ -23,7 +23,6 @@ final class AccountDetailsViewController: BaseViewController {
         static let marginsBanner = UIEdgeInsets(top: 0, left: 15, bottom: 15, right: 15)
         static let titleMargins = UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16)
         static let subtitleMargins = UIEdgeInsets(top: 8, left: 16, bottom: 16, right: 16)
-        static let buttonHeight: CGFloat = 40.0
         static let cornerRadius: CGFloat = 4
     }
     
@@ -160,10 +159,8 @@ final class AccountDetailsViewController: BaseViewController {
             
             signButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: ViewTraits.marginsButton.left),
             signButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -ViewTraits.marginsButton.right),
-            signButton.heightAnchor.constraint(equalToConstant: ViewTraits.buttonHeight),
             
             verifyButton.topAnchor.constraint(equalTo: signButton.bottomAnchor, constant: ViewTraits.marginsButton.top),
-            verifyButton.heightAnchor.constraint(equalToConstant: ViewTraits.buttonHeight),
             verifyButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -ViewTraits.marginsButton.right),
             verifyButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: ViewTraits.marginsButton.left),
             verifyButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -ViewTraits.marginsButton.bottom),
