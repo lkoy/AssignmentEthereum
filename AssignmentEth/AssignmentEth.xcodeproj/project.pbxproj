@@ -43,7 +43,6 @@
 		5330F2C223D246C100B073E8 /* loading_action_white.json in Resources */ = {isa = PBXBuildFile; fileRef = 5330F2C123D246C100B073E8 /* loading_action_white.json */; };
 		5330F2C923D246FF00B073E8 /* SetupAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2C423D246FF00B073E8 /* SetupAccountPresenter.swift */; };
 		5330F2CA23D246FF00B073E8 /* SetupAccountRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2C523D246FF00B073E8 /* SetupAccountRouter.swift */; };
-		5330F2CB23D246FF00B073E8 /* SetupAccountModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2C623D246FF00B073E8 /* SetupAccountModels.swift */; };
 		5330F2CC23D246FF00B073E8 /* SetupAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2C723D246FF00B073E8 /* SetupAccountViewController.swift */; };
 		5330F2CD23D246FF00B073E8 /* SetupAccountBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2C823D246FF00B073E8 /* SetupAccountBuilder.swift */; };
 		5330F2D023D24DCE00B073E8 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2CF23D24DCE00B073E8 /* TextField.swift */; };
@@ -58,12 +57,10 @@
 		5330F2E723D32E5800B073E8 /* Decimal+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2E623D32E5800B073E8 /* Decimal+String.swift */; };
 		5330F2EE23D3390C00B073E8 /* SignMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2E923D3390C00B073E8 /* SignMessagePresenter.swift */; };
 		5330F2EF23D3390C00B073E8 /* SignMessageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2EA23D3390C00B073E8 /* SignMessageRouter.swift */; };
-		5330F2F023D3390C00B073E8 /* SignMessageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2EB23D3390C00B073E8 /* SignMessageModels.swift */; };
 		5330F2F123D3390C00B073E8 /* SignMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2EC23D3390C00B073E8 /* SignMessageViewController.swift */; };
 		5330F2F223D3390C00B073E8 /* SignMessageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2ED23D3390C00B073E8 /* SignMessageBuilder.swift */; };
 		5330F2F923D33F5C00B073E8 /* VerifyMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2F423D33F5C00B073E8 /* VerifyMessagePresenter.swift */; };
 		5330F2FA23D33F5C00B073E8 /* VerifyMessageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2F523D33F5C00B073E8 /* VerifyMessageRouter.swift */; };
-		5330F2FB23D33F5C00B073E8 /* VerifyMessageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2F623D33F5C00B073E8 /* VerifyMessageModels.swift */; };
 		5330F2FC23D33F5C00B073E8 /* VerifyMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2F723D33F5C00B073E8 /* VerifyMessageViewController.swift */; };
 		5330F2FD23D33F5C00B073E8 /* VerifyMessageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2F823D33F5C00B073E8 /* VerifyMessageBuilder.swift */; };
 		5330F30123D3490B00B073E8 /* SignMessageWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2FF23D3490B00B073E8 /* SignMessageWorker.swift */; };
@@ -77,7 +74,6 @@
 		5330F31223D3651300B073E8 /* BarcodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F31123D3651300B073E8 /* BarcodeGenerator.swift */; };
 		53486AA423D37E4D0007729B /* QRCodeScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53486A9F23D37E4D0007729B /* QRCodeScannerPresenter.swift */; };
 		53486AA523D37E4D0007729B /* QRCodeScannerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53486AA023D37E4D0007729B /* QRCodeScannerRouter.swift */; };
-		53486AA623D37E4D0007729B /* QRCodeScannerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53486AA123D37E4D0007729B /* QRCodeScannerModels.swift */; };
 		53486AA723D37E4D0007729B /* QRCodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53486AA223D37E4D0007729B /* QRCodeScannerViewController.swift */; };
 		53486AA823D37E4D0007729B /* QRCodeScannerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53486AA323D37E4D0007729B /* QRCodeScannerBuilder.swift */; };
 		53486AAB23D388E10007729B /* CameraPermissionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53486AAA23D388E10007729B /* CameraPermissionStatus.swift */; };
@@ -112,6 +108,10 @@
 		53D9854E23D4CA1500486046 /* SetupAccountPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D9854D23D4CA1500486046 /* SetupAccountPresenterTests.swift */; };
 		53E8D16C23D4DFCE006111A7 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E8D16923D4DFC6006111A7 /* Nimble.framework */; };
 		53E8D16E23D4E073006111A7 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 53E8D16923D4DFC6006111A7 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		53E8D17723D5E19D006111A7 /* SetupAccountInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8D17623D5E19D006111A7 /* SetupAccountInteractorTests.swift */; };
+		53E8D17A23D5F69E006111A7 /* SignMessagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8D17923D5F69E006111A7 /* SignMessagePresenterTests.swift */; };
+		53E8D17D23D601D9006111A7 /* SignMessageInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8D17C23D601D9006111A7 /* SignMessageInteractorTests.swift */; };
+		53E8D18023D614E3006111A7 /* QRCodeScannerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8D17F23D614E3006111A7 /* QRCodeScannerPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,7 +196,6 @@
 		5330F2C123D246C100B073E8 /* loading_action_white.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading_action_white.json; sourceTree = "<group>"; };
 		5330F2C423D246FF00B073E8 /* SetupAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAccountPresenter.swift; sourceTree = "<group>"; };
 		5330F2C523D246FF00B073E8 /* SetupAccountRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAccountRouter.swift; sourceTree = "<group>"; };
-		5330F2C623D246FF00B073E8 /* SetupAccountModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAccountModels.swift; sourceTree = "<group>"; };
 		5330F2C723D246FF00B073E8 /* SetupAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAccountViewController.swift; sourceTree = "<group>"; };
 		5330F2C823D246FF00B073E8 /* SetupAccountBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAccountBuilder.swift; sourceTree = "<group>"; };
 		5330F2CF23D24DCE00B073E8 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
@@ -211,12 +210,10 @@
 		5330F2E623D32E5800B073E8 /* Decimal+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+String.swift"; sourceTree = "<group>"; };
 		5330F2E923D3390C00B073E8 /* SignMessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessagePresenter.swift; sourceTree = "<group>"; };
 		5330F2EA23D3390C00B073E8 /* SignMessageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessageRouter.swift; sourceTree = "<group>"; };
-		5330F2EB23D3390C00B073E8 /* SignMessageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessageModels.swift; sourceTree = "<group>"; };
 		5330F2EC23D3390C00B073E8 /* SignMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessageViewController.swift; sourceTree = "<group>"; };
 		5330F2ED23D3390C00B073E8 /* SignMessageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessageBuilder.swift; sourceTree = "<group>"; };
 		5330F2F423D33F5C00B073E8 /* VerifyMessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyMessagePresenter.swift; sourceTree = "<group>"; };
 		5330F2F523D33F5C00B073E8 /* VerifyMessageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyMessageRouter.swift; sourceTree = "<group>"; };
-		5330F2F623D33F5C00B073E8 /* VerifyMessageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyMessageModels.swift; sourceTree = "<group>"; };
 		5330F2F723D33F5C00B073E8 /* VerifyMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyMessageViewController.swift; sourceTree = "<group>"; };
 		5330F2F823D33F5C00B073E8 /* VerifyMessageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyMessageBuilder.swift; sourceTree = "<group>"; };
 		5330F2FF23D3490B00B073E8 /* SignMessageWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessageWorker.swift; sourceTree = "<group>"; };
@@ -230,7 +227,6 @@
 		5330F31123D3651300B073E8 /* BarcodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeGenerator.swift; sourceTree = "<group>"; };
 		53486A9F23D37E4D0007729B /* QRCodeScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerPresenter.swift; sourceTree = "<group>"; };
 		53486AA023D37E4D0007729B /* QRCodeScannerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerRouter.swift; sourceTree = "<group>"; };
-		53486AA123D37E4D0007729B /* QRCodeScannerModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerModels.swift; sourceTree = "<group>"; };
 		53486AA223D37E4D0007729B /* QRCodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerViewController.swift; sourceTree = "<group>"; };
 		53486AA323D37E4D0007729B /* QRCodeScannerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerBuilder.swift; sourceTree = "<group>"; };
 		53486AAA23D388E10007729B /* CameraPermissionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionStatus.swift; sourceTree = "<group>"; };
@@ -269,6 +265,10 @@
 		53D9853B23D4A42600486046 /* AppLaunchInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchInitializer.swift; sourceTree = "<group>"; };
 		53D9854D23D4CA1500486046 /* SetupAccountPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAccountPresenterTests.swift; sourceTree = "<group>"; };
 		53E8D16923D4DFC6006111A7 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		53E8D17623D5E19D006111A7 /* SetupAccountInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAccountInteractorTests.swift; sourceTree = "<group>"; };
+		53E8D17923D5F69E006111A7 /* SignMessagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessagePresenterTests.swift; sourceTree = "<group>"; };
+		53E8D17C23D601D9006111A7 /* SignMessageInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessageInteractorTests.swift; sourceTree = "<group>"; };
+		53E8D17F23D614E3006111A7 /* QRCodeScannerPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,7 +394,6 @@
 			isa = PBXGroup;
 			children = (
 				5330F2C823D246FF00B073E8 /* SetupAccountBuilder.swift */,
-				5330F2C623D246FF00B073E8 /* SetupAccountModels.swift */,
 				5330F2C423D246FF00B073E8 /* SetupAccountPresenter.swift */,
 				5330F2C723D246FF00B073E8 /* SetupAccountViewController.swift */,
 				5330F2C523D246FF00B073E8 /* SetupAccountRouter.swift */,
@@ -436,7 +435,6 @@
 			isa = PBXGroup;
 			children = (
 				5330F2ED23D3390C00B073E8 /* SignMessageBuilder.swift */,
-				5330F2EB23D3390C00B073E8 /* SignMessageModels.swift */,
 				5330F2E923D3390C00B073E8 /* SignMessagePresenter.swift */,
 				5330F2EC23D3390C00B073E8 /* SignMessageViewController.swift */,
 				5330F2EA23D3390C00B073E8 /* SignMessageRouter.swift */,
@@ -448,7 +446,6 @@
 			isa = PBXGroup;
 			children = (
 				5330F2F823D33F5C00B073E8 /* VerifyMessageBuilder.swift */,
-				5330F2F623D33F5C00B073E8 /* VerifyMessageModels.swift */,
 				5330F2F423D33F5C00B073E8 /* VerifyMessagePresenter.swift */,
 				5330F2F723D33F5C00B073E8 /* VerifyMessageViewController.swift */,
 				5330F2F523D33F5C00B073E8 /* VerifyMessageRouter.swift */,
@@ -490,7 +487,6 @@
 			isa = PBXGroup;
 			children = (
 				53486AA323D37E4D0007729B /* QRCodeScannerBuilder.swift */,
-				53486AA123D37E4D0007729B /* QRCodeScannerModels.swift */,
 				53486A9F23D37E4D0007729B /* QRCodeScannerPresenter.swift */,
 				53486AA223D37E4D0007729B /* QRCodeScannerViewController.swift */,
 				53486AA023D37E4D0007729B /* QRCodeScannerRouter.swift */,
@@ -773,6 +769,8 @@
 		53D9854923D4C93100486046 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				53E8D17E23D614B1006111A7 /* QRCodeScanner */,
+				53E8D17823D5F679006111A7 /* SignMessage */,
 				53D9854C23D4C99F00486046 /* SetupAccount */,
 			);
 			path = Modules;
@@ -789,6 +787,8 @@
 		53E8D16F23D50620006111A7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				53E8D17B23D601BD006111A7 /* SignMessage */,
+				53E8D17523D5E183006111A7 /* SetupAccount */,
 				53E8D17023D5062B006111A7 /* Models */,
 			);
 			path = Core;
@@ -807,6 +807,38 @@
 			children = (
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		53E8D17523D5E183006111A7 /* SetupAccount */ = {
+			isa = PBXGroup;
+			children = (
+				53E8D17623D5E19D006111A7 /* SetupAccountInteractorTests.swift */,
+			);
+			path = SetupAccount;
+			sourceTree = "<group>";
+		};
+		53E8D17823D5F679006111A7 /* SignMessage */ = {
+			isa = PBXGroup;
+			children = (
+				53E8D17923D5F69E006111A7 /* SignMessagePresenterTests.swift */,
+			);
+			path = SignMessage;
+			sourceTree = "<group>";
+		};
+		53E8D17B23D601BD006111A7 /* SignMessage */ = {
+			isa = PBXGroup;
+			children = (
+				53E8D17C23D601D9006111A7 /* SignMessageInteractorTests.swift */,
+			);
+			path = SignMessage;
+			sourceTree = "<group>";
+		};
+		53E8D17E23D614B1006111A7 /* QRCodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				53E8D17F23D614E3006111A7 /* QRCodeScannerPresenterTests.swift */,
+			);
+			path = QRCodeScanner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -957,8 +989,6 @@
 				5330F28E23D22CBE00B073E8 /* SecureEnclaveManager.swift in Sources */,
 				5330F29D23D230E200B073E8 /* CodableKeychain.swift in Sources */,
 				5330F29323D22F0400B073E8 /* PrivateKeyKeychainBuilder.swift in Sources */,
-				5330F2CB23D246FF00B073E8 /* SetupAccountModels.swift in Sources */,
-				53486AA623D37E4D0007729B /* QRCodeScannerModels.swift in Sources */,
 				5330F2BC23D2388800B073E8 /* Bundle+App.swift in Sources */,
 				5330F2D423D2812B00B073E8 /* SetupAccountWorker.swift in Sources */,
 				5330F2E723D32E5800B073E8 /* Decimal+String.swift in Sources */,
@@ -966,7 +996,6 @@
 				538541B723D0C11E007D5FF3 /* SplashBuilder.swift in Sources */,
 				5330F2C923D246FF00B073E8 /* SetupAccountPresenter.swift in Sources */,
 				538541AB23D0C07D007D5FF3 /* BaseRouter.swift in Sources */,
-				5330F2FB23D33F5C00B073E8 /* VerifyMessageModels.swift in Sources */,
 				5330F2B423D236CB00B073E8 /* CALayer+Sketch.swift in Sources */,
 				5330F2CA23D246FF00B073E8 /* SetupAccountRouter.swift in Sources */,
 				5330F2FC23D33F5C00B073E8 /* VerifyMessageViewController.swift in Sources */,
@@ -1006,7 +1035,6 @@
 				53486AA823D37E4D0007729B /* QRCodeScannerBuilder.swift in Sources */,
 				5330F2AB23D2358900B073E8 /* Label.swift in Sources */,
 				53486AA423D37E4D0007729B /* QRCodeScannerPresenter.swift in Sources */,
-				5330F2F023D3390C00B073E8 /* SignMessageModels.swift in Sources */,
 				5330F26323D1DDD300B073E8 /* Provider.swift in Sources */,
 				5330F2BE23D2390F00B073E8 /* UIFont+AppTypo.swift in Sources */,
 				5330F2B223D2368700B073E8 /* UIColor+App.swift in Sources */,
@@ -1040,7 +1068,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53E8D18023D614E3006111A7 /* QRCodeScannerPresenterTests.swift in Sources */,
+				53E8D17723D5E19D006111A7 /* SetupAccountInteractorTests.swift in Sources */,
 				53D9854E23D4CA1500486046 /* SetupAccountPresenterTests.swift in Sources */,
+				53E8D17D23D601D9006111A7 /* SignMessageInteractorTests.swift in Sources */,
+				53E8D17A23D5F69E006111A7 /* SignMessagePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

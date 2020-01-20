@@ -40,6 +40,10 @@ final class QRCodeScannerPresenter<T: QRCodeScannerViewControllerProtocol, U: QR
         super.init(viewController: viewController, router: router)
     }
     
+    func verifyMessageWithSignature(_ signature: String) {
+        self.verifyMessageInteractor.verifyMessage(self.messageToVerify, signature: signature)
+    }
+    
 }
 
 extension QRCodeScannerPresenter: QRCodeScannerPresenterProtocol {
@@ -80,12 +84,17 @@ extension QRCodeScannerPresenter: QrScanningInteractorCallbackProtocol {
     
     func foundQR(signature: String) {
         
-        self.verifyMessageInteractor.verifyMessage(self.messageToVerify, signature: signature)
+        self.verifyMessageWithSignature(signature)
     }
     
     func invalidQr() {
-        viewController.stopScanning()
-        }
+        
+        self.router.navigateToAlert(title: "Error", message: "QR not Valid", primaryAction: { [weak self] (_) in
+            guard let self = self else { return }
+            
+            self.viewController.startScanning()
+        })
+    }
 }
 
 extension QRCodeScannerPresenter: VerifyMessageInteractorCallbackProtocol {
