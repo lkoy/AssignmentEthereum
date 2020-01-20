@@ -60,6 +60,7 @@ class QRCodeScannerPresenterTests: XCTestCase {
         
         sut.readedQrs(["qr_readed"])
 
+        expect(self.viewControllerSpy.stopScanningCalled).toEventually(equal(1))
         expect(self.viewControllerSpy.signatureValidCalled).toEventually(equal(1))
         expect(self.routerSpy.navigateToAlertCalled).toEventually(equal(1))
     }
@@ -71,7 +72,19 @@ class QRCodeScannerPresenterTests: XCTestCase {
         
         sut.readedQrs(["qr_readed"])
 
+        expect(self.viewControllerSpy.stopScanningCalled).toEventually(equal(1))
         expect(self.viewControllerSpy.signatureInvalidCalled).toEventually(equal(1))
+        expect(self.routerSpy.navigateToAlertCalled).toEventually(equal(1))
+    }
+    
+    func test_given_qr_found_with_verify_message_error_then_navigate_alert_valid() {
+        
+        qrScanningInteractor.stubQrScanningFunctionFor(self.sut.foundQR(signature: "signature"))
+        verifyMessageInteractor.stubVerifyMessageFor(self.sut.show(error: .verifyMessageError))
+        
+        sut.readedQrs(["qr_readed"])
+
+        expect(self.viewControllerSpy.stopScanningCalled).toEventually(equal(1))
         expect(self.routerSpy.navigateToAlertCalled).toEventually(equal(1))
     }
     
@@ -83,6 +96,20 @@ class QRCodeScannerPresenterTests: XCTestCase {
 
         expect(self.viewControllerSpy.stopScanningCalled).toEventually(equal(1))
         expect(self.routerSpy.navigateToAlertCalled).toEventually(equal(1))
+    }
+    
+    func test_back_tapped_then_navigate_back() {
+        
+        sut.backPressed()
+
+        expect(self.routerSpy.navigateBackCalled).toEventually(equal(1))
+    }
+    
+    func test_view_appeared_then_start_scanning() {
+        
+        sut.viewAppear()
+
+        expect(self.viewControllerSpy.startScanningCalled).toEventually(equal(1))
     }
     
     private func givenSut() -> QRCodeScannerPresenter<ViewControllerSpy, RouterSpy> {
@@ -140,7 +167,6 @@ private class ViewControllerSpy: QRCodeScannerViewControllerProtocol {
 private class RouterSpy: QRCodeScannerRouterProtocol {
     
     var navigateBackCalled: Int = 0
-    var navigateToSignatureDetailsCalled: Int = 0
     var navigateToAlertCalled: Int = 0
     
     func navigateBack() {
