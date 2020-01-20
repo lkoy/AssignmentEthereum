@@ -114,7 +114,7 @@
 		53E8D18023D614E3006111A7 /* QRCodeScannerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8D17F23D614E3006111A7 /* QRCodeScannerPresenterTests.swift */; };
 		53E8D18323D62B8B006111A7 /* QrScanningInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8D18223D62B8B006111A7 /* QrScanningInteractorTests.swift */; };
 		53E8D18823D62CC4006111A7 /* MockCameraPermissionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8D18723D62CC4006111A7 /* MockCameraPermissionStatus.swift */; };
-		CC58EFF523D64B8E00EBFA0D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC58EFF423D64B8E00EBFA0D /* Localizable.strings */; };
+		CC9EE2AE23D64E7C00FD4834 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC9EE2B023D64E7C00FD4834 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -274,7 +274,7 @@
 		53E8D17F23D614E3006111A7 /* QRCodeScannerPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerPresenterTests.swift; sourceTree = "<group>"; };
 		53E8D18223D62B8B006111A7 /* QrScanningInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScanningInteractorTests.swift; sourceTree = "<group>"; };
 		53E8D18723D62CC4006111A7 /* MockCameraPermissionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCameraPermissionStatus.swift; sourceTree = "<group>"; };
-		CC58EFF423D64B8E00EBFA0D /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		CC9EE2AF23D64E7C00FD4834 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -573,7 +573,7 @@
 		5385419823D0BBCD007D5FF3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CC58EFF423D64B8E00EBFA0D /* Localizable.strings */,
+				CC9EE2B023D64E7C00FD4834 /* Localizable.strings */,
 				538541A123D0BFA4007D5FF3 /* Animations */,
 				539CBE3A23D0BA440031F6D2 /* Assets.xcassets */,
 			);
@@ -989,7 +989,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC58EFF523D64B8E00EBFA0D /* Localizable.strings in Resources */,
+				CC9EE2AE23D64E7C00FD4834 /* Localizable.strings in Resources */,
 				5330F2C223D246C100B073E8 /* loading_action_white.json in Resources */,
 				53D9852F23D45C1300486046 /* loading_ethereum.json in Resources */,
 				539CBE3E23D0BA440031F6D2 /* LaunchScreen.storyboard in Resources */,
@@ -1150,6 +1150,14 @@
 				539CBE3D23D0BA440031F6D2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CC9EE2B023D64E7C00FD4834 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC9EE2AF23D64E7C00FD4834 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
