@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  AssignmentEth
+
+  Created by Gustavo Iglesias on 20/01/2020.
+  Copyright © 2020 ttg. All rights reserved.
+*/
+
+"continue_button" = "Continue";
+
+//Setup screen
+"setup_title" = "Setup";
+"setup_subtitle" = "User your private key to get your balance.";
