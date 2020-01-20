@@ -112,6 +112,8 @@
 		53E8D17A23D5F69E006111A7 /* SignMessagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8D17923D5F69E006111A7 /* SignMessagePresenterTests.swift */; };
 		53E8D17D23D601D9006111A7 /* SignMessageInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8D17C23D601D9006111A7 /* SignMessageInteractorTests.swift */; };
 		53E8D18023D614E3006111A7 /* QRCodeScannerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8D17F23D614E3006111A7 /* QRCodeScannerPresenterTests.swift */; };
+		53E8D18323D62B8B006111A7 /* QrScanningInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8D18223D62B8B006111A7 /* QrScanningInteractorTests.swift */; };
+		53E8D18823D62CC4006111A7 /* MockCameraPermissionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E8D18723D62CC4006111A7 /* MockCameraPermissionStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,6 +271,8 @@
 		53E8D17923D5F69E006111A7 /* SignMessagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessagePresenterTests.swift; sourceTree = "<group>"; };
 		53E8D17C23D601D9006111A7 /* SignMessageInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessageInteractorTests.swift; sourceTree = "<group>"; };
 		53E8D17F23D614E3006111A7 /* QRCodeScannerPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScannerPresenterTests.swift; sourceTree = "<group>"; };
+		53E8D18223D62B8B006111A7 /* QrScanningInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrScanningInteractorTests.swift; sourceTree = "<group>"; };
+		53E8D18723D62CC4006111A7 /* MockCameraPermissionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCameraPermissionStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -787,6 +791,8 @@
 		53E8D16F23D50620006111A7 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				53E8D18423D62C93006111A7 /* Common */,
+				53E8D18123D62B71006111A7 /* QRCodeScanner */,
 				53E8D17B23D601BD006111A7 /* SignMessage */,
 				53E8D17523D5E183006111A7 /* SetupAccount */,
 				53E8D17023D5062B006111A7 /* Models */,
@@ -839,6 +845,38 @@
 				53E8D17F23D614E3006111A7 /* QRCodeScannerPresenterTests.swift */,
 			);
 			path = QRCodeScanner;
+			sourceTree = "<group>";
+		};
+		53E8D18123D62B71006111A7 /* QRCodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				53E8D18223D62B8B006111A7 /* QrScanningInteractorTests.swift */,
+			);
+			path = QRCodeScanner;
+			sourceTree = "<group>";
+		};
+		53E8D18423D62C93006111A7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				53E8D18523D62C9D006111A7 /* Managers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		53E8D18523D62C9D006111A7 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				53E8D18623D62CA9006111A7 /* Camera */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		53E8D18623D62CA9006111A7 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				53E8D18723D62CC4006111A7 /* MockCameraPermissionStatus.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1070,6 +1108,8 @@
 			files = (
 				53E8D18023D614E3006111A7 /* QRCodeScannerPresenterTests.swift in Sources */,
 				53E8D17723D5E19D006111A7 /* SetupAccountInteractorTests.swift in Sources */,
+				53E8D18823D62CC4006111A7 /* MockCameraPermissionStatus.swift in Sources */,
+				53E8D18323D62B8B006111A7 /* QrScanningInteractorTests.swift in Sources */,
 				53D9854E23D4CA1500486046 /* SetupAccountPresenterTests.swift in Sources */,
 				53E8D17D23D601D9006111A7 /* SignMessageInteractorTests.swift in Sources */,
 				53E8D17A23D5F69E006111A7 /* SignMessagePresenterTests.swift in Sources */,
