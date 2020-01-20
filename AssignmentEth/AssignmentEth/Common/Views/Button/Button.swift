@@ -34,7 +34,6 @@ public class Button: UIControl, Pulseable {
     private enum ViewTraits {
         static let margins = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
         static let imageMargins = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        static let miniMargins = UIEdgeInsets(top: 0, left: 16, bottom: -2, right: 16)
         static let minWidth: CGFloat = 96
         static let height: CGFloat = 36
         static let imageHeight: CGFloat = 40
