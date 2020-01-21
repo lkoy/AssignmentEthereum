@@ -6,7 +6,7 @@
     <img src="https://www.objc.io/images/issue-13/2014-06-07-viper-intro-0a53d9f8.jpg" alt="VIPER" height="200px">
 </p>
 
-For this project I choose VIPER architecture to implement it.
+For this project I choose VIPER architecture to implement it, VIPER follows the Clean Architecture principles.
 
 In addition to the VIPER components View, Interactor, Presenter, Entity and Routing I added the Builder and the Worker.
 <p align="center">
