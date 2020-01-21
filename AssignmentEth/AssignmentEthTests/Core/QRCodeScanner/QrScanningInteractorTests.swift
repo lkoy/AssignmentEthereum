@@ -42,9 +42,9 @@ class QrScanningInteractorTests: XCTestCase {
     }
     
     func test_process_valid_qr() {
-        let invalidQr = ["hwegogojlsjdgojds"]
+        let validQr = ["hwegogojlsjdgojds"]
         
-        sut.processQrs(qrs: invalidQr)
+        sut.processQrs(qrs: validQr)
         
         expect(self.spyPresenter.qrCalled).toEventually(equal(1))
         expect(self.spyPresenter.invalidQrCalled).toEventually(equal(0))

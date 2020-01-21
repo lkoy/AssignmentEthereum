@@ -41,11 +41,12 @@ class SetupAccountPresenterTests: XCTestCase {
         expect(self.viewControllerSpy.showLoadingStateCalled).toEventually(equal(1))
         expect(self.routerSpy.navigateToAccountDetailsCalled).toEventually(equal(1))
         expect(self.viewControllerSpy.hideLoadingStateCalled).toEventually(equal(1))
+        expect(self.routerSpy.navigateToAlertCalled).toEventually(equal(0))
     }
     
     func test_given_account_details_not_found_then_show_alert() {
         
-        setupAccountInteractor.stubGetAccountDetailsFor(self.sut.showError())
+        setupAccountInteractor.stubGetAccountDetailsFor(self.sut.showError(.storePrivateKeyError))
         
         sut.getDetails(forInput: "Private Key")
         expect(self.viewControllerSpy.showLoadingStateCalled).toEventually(equal(1))
@@ -104,7 +105,7 @@ private class MockSetupAccountInteractor: SetupAccountInteractorProtocol {
         self.getAccountDetailsFunction = f
     }
     
-    func getAccountDetails(forPrimaryKey primaryKey:String) {
+    func getAccountDetails(forPrivateKey privateKey:String) {
         
         getAccountDetailsFunction()
     }
