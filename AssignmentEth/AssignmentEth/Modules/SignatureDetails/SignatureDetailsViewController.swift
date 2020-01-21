@@ -69,7 +69,7 @@ final class SignatureDetailsViewController: BaseViewController {
 
         view.backgroundColor = .white
         
-        topBar = TopBarView(type: .navigation, title: "Signature")
+        topBar = TopBarView(type: .navigation, title: NSLocalizedString("signature_details_title", comment: "Signature details screen title"))
         topBar.delegate = self
         topBar.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(topBar)
@@ -89,7 +89,7 @@ final class SignatureDetailsViewController: BaseViewController {
         contentView.addSubview(textContainer)
         
         titleMessageLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleMessageLabel.text = "Message"
+        titleMessageLabel.text = NSLocalizedString("message_label", comment: "Message label text")
         titleMessageLabel.backgroundColor = .clear
         titleMessageLabel.numberOfLines = 1
         titleMessageLabel.setContentHuggingPriority(.required, for: .vertical)

@@ -101,13 +101,13 @@ extension QRCodeScannerPresenter: VerifyMessageInteractorCallbackProtocol {
     
     func messageVerified(valid: Bool) {
         
-        let title = "message"
-        var message = "Signature valid"
+        let title = NSLocalizedString("validation_alert_title", comment: "Validation alert title")
+        var message = NSLocalizedString("validation_valid_mesage", comment: "Validation alert message valid")
         if valid {
             self.viewController.signatureValid()
         } else {
             self.viewController.signatureInvalid()
-            message = "Signature invalid"
+            message = NSLocalizedString("validation_invalide_mesage", comment: "Validation alert message invalid")
         }
         
         self.router.navigateToAlert(title: title, message: message, primaryAction: { [weak self] (_) in
@@ -118,10 +118,12 @@ extension QRCodeScannerPresenter: VerifyMessageInteractorCallbackProtocol {
     }
     
     func show(error: VerifyMessageInteractorError) {
-        self.router.navigateToAlert(title: "Error", message: "Signature not well formed", primaryAction: { [weak self] (_) in
-            guard let self = self else { return }
+        self.router.navigateToAlert(title: NSLocalizedString("error_alert_title", comment: "Error alert title"),
+                                    message: NSLocalizedString("error_signature_message", comment: "Error signature message"),
+                                    primaryAction: { [weak self] (_) in
+                                        guard let self = self else { return }
             
-            self.viewController.startScanning()
-        })
+                                        self.viewController.startScanning()
+                                    })
     }
 }

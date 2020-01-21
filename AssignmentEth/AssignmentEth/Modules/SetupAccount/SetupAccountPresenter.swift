@@ -51,6 +51,7 @@ extension SetupAccountPresenter: SetupAccountInteractorCallbackProtocol {
     func showError() {
         
         self.viewController.hideLoadingState()
-        self.router.navigateToAlert(title: "Error", message: "An error occurred getting the account details.", primaryAction: nil)
+        self.router.navigateToAlert(title: NSLocalizedString("error_alert_title", comment: "Error alert title"),
+                                    message: NSLocalizedString("error_account_details_title", comment: "Account not found details"), primaryAction: nil)
     }
 }

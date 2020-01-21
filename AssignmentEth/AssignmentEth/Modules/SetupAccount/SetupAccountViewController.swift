@@ -76,7 +76,7 @@ final class SetupAccountViewController: BaseViewController {
         view.addSubview(topBar)
         
         privateKeyField = TextField()
-        privateKeyField.title = "Private key"
+        privateKeyField.title = NSLocalizedString("private_key_label", comment: "PrivateKey name")
         privateKeyField.status = .normal
         privateKeyField.keyboardType = .default
         privateKeyField.returnKeyType = .done
