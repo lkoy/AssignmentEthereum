@@ -17,7 +17,7 @@ The project is divided in scenes, each scene have the View, Presenter, Router, V
 
 Each interactor is a Use Case and are called from the Presenter. Interactor have one or more workers, every worker is an atomic action and can be used in different Interactors to compose a new Use Case. 
 
-Domain models are used on bussines layer and converted to view models to use on presentation layer, the presenter is on charge of this conversion and to decide the behaviour of the view layer.
+Domain models are used on bussines layer and converted to view models to use on the presentation layer, the presenter is on charge of this conversion and deciding the behaviour of the view layer.
 
 I chose this architecture because is scalable and easy to test. I added testing in some of the scenes to show at least one test type(Interactor and Presenter).
 
