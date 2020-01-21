@@ -17,3 +17,4 @@ The project is divided in scenes, each scene have the View, Presenter, Router, V
 
 Each interactor is a Use Case and are called from the Presenter. Interactor have one or more Workers every worker is an atomic action and can be used in different Interactor to compose a new Use Case. 
 
+Domain models are used on bussines layer and converted to view models to use on presentation layer, the presenter is on charge of this conversion and to decide the behaviour of the view layer.
