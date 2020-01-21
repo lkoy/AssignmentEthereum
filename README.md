@@ -10,5 +10,8 @@ For this project I choose VIPER architecture to implement it.
 
 In addition to the VIPER components View, Interactor, Presenter, Entity and Routing I added the Builder and the Worker.
 <p align="center">
-    <img src="https://www.objc.io/images/issue-13/2014-06-07-viper-wireframe-76305b6d.png" alt="VIPER" height="20px">
+    <img src="https://www.objc.io/images/issue-13/2014-06-07-viper-wireframe-76305b6d.png" alt="VIPER" height="250px">
 </p>
+
+The project is divided in scenes, each scene have the View, Presenter, Router, ViewModels and Builder. The builder is in charge of instantiate all the components needed for each scene and add Interactors if bussiness layer is needed.
+Each interactor is a Use Case and are called from the Presenter. Each interactor have one or more Workers the ones needed for the Use Case.
