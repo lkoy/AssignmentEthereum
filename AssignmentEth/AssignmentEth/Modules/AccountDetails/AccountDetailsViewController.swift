@@ -63,7 +63,7 @@ final class AccountDetailsViewController: BaseViewController {
 
         view.backgroundColor = .white
         
-        topBar = TopBarView(type: .title, title: "Account")
+        topBar = TopBarView(type: .title, title: NSLocalizedString("account_details_title", comment: "Account details screen title"))
         topBar.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(topBar)
         
@@ -82,7 +82,7 @@ final class AccountDetailsViewController: BaseViewController {
         contentView.addSubview(textContainer)
         
         titleAddressLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleAddressLabel.text = "Address"
+        titleAddressLabel.text = NSLocalizedString("address_label", comment: "Address label text")
         titleAddressLabel.backgroundColor = .clear
         titleAddressLabel.numberOfLines = 1
         titleAddressLabel.setContentHuggingPriority(.required, for: .vertical)
@@ -97,7 +97,7 @@ final class AccountDetailsViewController: BaseViewController {
         textContainer.addSubview(subtitleAddressLabel)
         
         titleBalanceLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleBalanceLabel.text = "Balance"
+        titleBalanceLabel.text = NSLocalizedString("balance_label", comment: "Balance label text")
         titleBalanceLabel.backgroundColor = .clear
         titleBalanceLabel.numberOfLines = 1
         titleBalanceLabel.setContentHuggingPriority(.required, for: .vertical)
@@ -112,13 +112,13 @@ final class AccountDetailsViewController: BaseViewController {
         textContainer.addSubview(subtitleBalanceLabel)
         
         signButton = Button(style: .blue)
-        signButton.title = "Sign"
+        signButton.title = NSLocalizedString("sign_button", comment: "Sign button text")
         signButton.addTarget(self, action: #selector(signTapped), for: .touchUpInside)
         signButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(signButton)
         
         verifyButton = Button(style: .blue)
-        verifyButton.title = "Verify"
+        verifyButton.title = NSLocalizedString("verify_button", comment: "Verify button text")
         verifyButton.addTarget(self, action: #selector(verificationTapped), for: .touchUpInside)
         verifyButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(verifyButton)

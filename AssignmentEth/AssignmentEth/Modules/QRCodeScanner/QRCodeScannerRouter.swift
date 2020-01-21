@@ -25,7 +25,7 @@ class QRCodeScannerRouter: BaseRouter, QRCodeScannerRouterProtocol {
                                       message: message,
                                       style: .alert)
         
-        dialog.addAction(DialogAction(title: "Ok",
+        dialog.addAction(DialogAction(title: NSLocalizedString("ok_button", comment: "Ok button text"),
                                       style: .primary,
                                       handler: primaryAction))
         

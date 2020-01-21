@@ -62,7 +62,7 @@ final class QRCodeScannerViewController: BaseViewController {
 
         view.backgroundColor = .white
         
-        topBar = TopBarView(type: .navigation, title: "QR code scanner")
+        topBar = TopBarView(type: .navigation, title: NSLocalizedString("qr_code_scanner_title", comment: "QR reader screen title"))
         topBar.delegate = self
         topBar.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(topBar)
@@ -96,24 +96,22 @@ final class QRCodeScannerViewController: BaseViewController {
     // MARK: Private Methods
     
     func askForCameraPermissions() {
-        if NSClassFromString("XCTest") == nil {
-            AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
-                DispatchQueue.main.sync {
-                    if response {
-                        self.initVideoView()
-                        self.startScanning()
-                    }
+        
+        AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
+            DispatchQueue.main.sync {
+                if response {
+                    self.initVideoView()
+                    self.startScanning()
                 }
             }
         }
     }
     
     func showVideoView() {
-        if NSClassFromString("XCTest") == nil {
-            AVCaptureDevice.requestAccess(for: AVMediaType.video) { _ in
-                DispatchQueue.main.sync {
-                    self.initVideoView()
-                }
+        
+        AVCaptureDevice.requestAccess(for: AVMediaType.video) { _ in
+            DispatchQueue.main.sync {
+                self.initVideoView()
             }
         }
     }

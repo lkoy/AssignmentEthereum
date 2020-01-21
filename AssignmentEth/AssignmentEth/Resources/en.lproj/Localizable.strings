@@ -1,0 +1,49 @@
+/* 
+  Localizable.strings
+  AssignmentEth
+
+  Created by Gustavo Iglesias on 20/01/2020.
+  Copyright © 2020 ttg. All rights reserved.
+*/
+
+"private_key_label" = "Private Key";
+"address_label" = "Address";
+"balance_label" = "Balance";
+"message_label" = "Message";
+"your_message_label" = "Your message";
+
+"continue_button" = "Continue";
+"ok_button" = "Ok";
+"sign_button" = "Sign";
+"verify_button" = "Verify";
+"verify_message_button" = "Verify message";
+"sign_message_button" = "Sign message";
+
+//Alert
+"error_alert_title" = "Error";
+"error_account_details_message" = "An error occurred getting the account details.";
+"error_singing_message" = "An error occurred singing message.";
+"error_signature_message" = "Signature not well formed";
+
+"validation_alert_title" = "Message";
+"validation_valid_mesage" = "Signature valid";
+"validation_invalide_mesage" = "Signature invalid";
+
+//Setup screen
+"setup_title" = "Setup";
+"setup_subtitle" = "User your private key to get your balance.";
+
+//Account details screen
+"account_details_title" = "Account";
+
+//Sign message screen
+"sign_message_title" = "Signing";
+
+//Signature details screen
+"signature_details_title" = "Signature";
+
+//Verify message screen
+"verify_message_title" = "Verification";
+
+//QR code scanner screen
+"qr_code_scanner_title" = "QR code scanner";

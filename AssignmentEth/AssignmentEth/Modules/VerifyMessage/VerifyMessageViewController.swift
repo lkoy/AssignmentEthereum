@@ -64,13 +64,13 @@ final class VerifyMessageViewController: BaseViewController {
 
         view.backgroundColor = .white
         
-        topBar = TopBarView(type: .navigation, title: "Verification")
+        topBar = TopBarView(type: .navigation, title: NSLocalizedString("verify_message_title", comment: "Verification message screen title"))
         topBar.delegate = self
         topBar.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(topBar)
         
         messageField = TextField()
-        messageField.title = "Your message"
+        messageField.title = NSLocalizedString("your_message_label", comment: "Your message label text")
         messageField.status = .normal
         messageField.keyboardType = .default
         messageField.delegate = self
@@ -78,7 +78,7 @@ final class VerifyMessageViewController: BaseViewController {
         view.addSubview(messageField)
         
         verifyButton = Button(style: .blue)
-        verifyButton.title = "Verify message"
+        verifyButton.title = NSLocalizedString("verify_message_button", comment: "Verify message button text")
         verifyButton.addTarget(self, action: #selector(verifyMessageTapped), for: .touchUpInside)
         verifyButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(verifyButton)

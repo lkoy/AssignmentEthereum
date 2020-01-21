@@ -64,13 +64,13 @@ final class SignMessageViewController: BaseViewController {
 
         view.backgroundColor = .white
         
-        topBar = TopBarView(type: .navigation, title: "Signing")
+        topBar = TopBarView(type: .navigation, title: NSLocalizedString("sign_message_title", comment: "Singing screen title"))
         topBar.delegate = self
         topBar.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(topBar)
         
         messageField = TextField()
-        messageField.title = "Your message"
+        messageField.title = NSLocalizedString("your_message_label", comment: "Your message label text")
         messageField.status = .normal
         messageField.keyboardType = .default
         messageField.delegate = self
@@ -78,7 +78,7 @@ final class SignMessageViewController: BaseViewController {
         view.addSubview(messageField)
         
         signButton = Button(style: .blue)
-        signButton.title = "Sign message"
+        signButton.title = NSLocalizedString("sign_message_button", comment: "Sign message button text")
         signButton.addTarget(self, action: #selector(signMessageTapped), for: .touchUpInside)
         signButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(signButton)

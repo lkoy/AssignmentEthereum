@@ -69,12 +69,14 @@ final class SetupAccountViewController: BaseViewController {
 
         view.backgroundColor = .white
         
-        topBar = TopBarView(type: .title, title: "Setup", subtitle: "User your private key to get your balance.")
+        topBar = TopBarView(type: .title,
+                            title: NSLocalizedString("setup_title", comment: "Setup screen title"),
+                            subtitle: NSLocalizedString("setup_subtitle", comment: "Setup screen subtitle"))
         topBar.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(topBar)
         
         privateKeyField = TextField()
-        privateKeyField.title = "Private key"
+        privateKeyField.title = NSLocalizedString("private_key_label", comment: "PrivateKey name")
         privateKeyField.status = .normal
         privateKeyField.keyboardType = .default
         privateKeyField.returnKeyType = .done
@@ -83,7 +85,7 @@ final class SetupAccountViewController: BaseViewController {
         view.addSubview(privateKeyField)
         
         confirmButton = Button(style: .blue)
-        confirmButton.title = "Continue"
+        confirmButton.title = NSLocalizedString("continue_button", comment: "Continue button")
         confirmButton.addTarget(self, action: #selector(confirmTapped), for: .touchUpInside)
         confirmButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(confirmButton)
