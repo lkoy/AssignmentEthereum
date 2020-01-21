@@ -10,7 +10,7 @@ import Foundation
 
 enum AppModels {
     
-    struct PrivateKeyApp: Codable {
+    struct PrivateKeyApp: Codable, Equatable {
         let pritateKey: String?
     }
     

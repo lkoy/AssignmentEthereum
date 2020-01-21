@@ -36,7 +36,7 @@ extension SetupAccountPresenter: SetupAccountPresenterProtocol {
     func getDetails(forInput primaryKey: String) {
         
         self.viewController.showLoadingState()
-        self.setupAccountInteractor.getAccountDetails(forPrimaryKey: primaryKey)
+        self.setupAccountInteractor.getAccountDetails(forPrivateKey: primaryKey)
     }
 }
 
@@ -48,7 +48,7 @@ extension SetupAccountPresenter: SetupAccountInteractorCallbackProtocol {
         self.router.navigateToAccountDetails(accountDetails: accountDetails)
     }
     
-    func showError() {
+    func showError(_ error: SetupAccountInteractorError) {
         
         self.viewController.hideLoadingState()
         self.router.navigateToAlert(title: NSLocalizedString("error_alert_title", comment: "Error alert title"),

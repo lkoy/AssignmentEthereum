@@ -40,6 +40,7 @@ class SignMessageInteractorTests: XCTestCase {
         
         sut.signMessage("message")
         expect(self.presenter.showErrorCalled).toEventually(equal(1))
+        expect(self.presenter.messageSignedCalled).toEventually(equal(0))
         expect(self.presenter.showError).toEventually(equal(.fetchPrivateKeyError))
     }
     
@@ -50,6 +51,7 @@ class SignMessageInteractorTests: XCTestCase {
             
         sut.signMessage("message")
         expect(self.presenter.messageSignedCalled).toEventually(equal(1))
+        expect(self.presenter.showErrorCalled).toEventually(equal(0))
     }
     
     func test_private_key_on_keychain_message_not_signed_then_show_fetch_error() {
