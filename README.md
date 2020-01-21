@@ -15,7 +15,7 @@ In addition to the VIPER components View, Interactor, Presenter, Entity and Rout
 
 The project is divided in scenes, each scene have the View, Presenter, Router, ViewModels and Builder. The builder is in charge of instantiate all the components needed for each scene and add Interactors if bussiness layer is needed.
 
-Each interactor is a Use Case and are called from the Presenter. Interactor have one or more Workers every worker is an atomic action and can be used in different Interactor to compose a new Use Case. 
+Each interactor is a Use Case and are called from the Presenter. Interactor have one or more workers, every worker is an atomic action and can be used in different Interactors to compose a new Use Case. 
 
 Domain models are used on bussines layer and converted to view models to use on presentation layer, the presenter is on charge of this conversion and to decide the behaviour of the view layer.
 
