@@ -17,10 +17,12 @@ protocol VerifyMessageRouterProtocol: BaseRouterProtocol {
 class VerifyMessageRouter: BaseRouter, VerifyMessageRouterProtocol {
 
     func navigateBack() {
+        
         navigationController?.popViewController(animated: true)
     }
     
     func navigateToQRReader(withMessage message: String) {
+        
         navigationController?.pushViewController(QRCodeScannerBuilder().build(message: message), animated: true)
     }
 }

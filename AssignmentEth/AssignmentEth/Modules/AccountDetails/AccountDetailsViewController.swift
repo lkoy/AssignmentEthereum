@@ -53,6 +53,7 @@ final class AccountDetailsViewController: BaseViewController {
      */
     
     override func viewDidLoad() {
+        
             super.viewDidLoad()
             presenter.prepareView()
         }

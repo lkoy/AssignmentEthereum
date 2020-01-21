@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5330F25A23D1DC3C00B073E8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F25923D1DC3C00B073E8 /* Constants.swift */; };
 		5330F25E23D1DDA100B073E8 /* String+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F25B23D1DDA000B073E8 /* String+Optional.swift */; };
-		5330F25F23D1DDA100B073E8 /* URLRequest+curl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F25C23D1DDA100B073E8 /* URLRequest+curl.swift */; };
 		5330F26023D1DDA100B073E8 /* Error+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F25D23D1DDA100B073E8 /* Error+Info.swift */; };
 		5330F26323D1DDD300B073E8 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F26223D1DDD300B073E8 /* Provider.swift */; };
 		5330F26523D1DE1100B073E8 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F26423D1DE1100B073E8 /* Configuration.swift */; };
@@ -54,7 +53,6 @@
 		5330F2DF23D290F000B073E8 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2DA23D290F000B073E8 /* AccountDetailsViewController.swift */; };
 		5330F2E023D290F000B073E8 /* AccountDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2DB23D290F000B073E8 /* AccountDetailsBuilder.swift */; };
 		5330F2E523D32D6A00B073E8 /* AccountDetailsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2E423D32D6A00B073E8 /* AccountDetailsMapper.swift */; };
-		5330F2E723D32E5800B073E8 /* Decimal+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2E623D32E5800B073E8 /* Decimal+String.swift */; };
 		5330F2EE23D3390C00B073E8 /* SignMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2E923D3390C00B073E8 /* SignMessagePresenter.swift */; };
 		5330F2EF23D3390C00B073E8 /* SignMessageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2EA23D3390C00B073E8 /* SignMessageRouter.swift */; };
 		5330F2F123D3390C00B073E8 /* SignMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5330F2EC23D3390C00B073E8 /* SignMessageViewController.swift */; };
@@ -168,7 +166,6 @@
 		5330F25523D1DAC800B073E8 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		5330F25923D1DC3C00B073E8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5330F25B23D1DDA000B073E8 /* String+Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Optional.swift"; sourceTree = "<group>"; };
-		5330F25C23D1DDA100B073E8 /* URLRequest+curl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+curl.swift"; sourceTree = "<group>"; };
 		5330F25D23D1DDA100B073E8 /* Error+Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error+Info.swift"; sourceTree = "<group>"; };
 		5330F26223D1DDD300B073E8 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		5330F26423D1DE1100B073E8 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -210,7 +207,6 @@
 		5330F2DA23D290F000B073E8 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 		5330F2DB23D290F000B073E8 /* AccountDetailsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsBuilder.swift; sourceTree = "<group>"; };
 		5330F2E423D32D6A00B073E8 /* AccountDetailsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailsMapper.swift; sourceTree = "<group>"; };
-		5330F2E623D32E5800B073E8 /* Decimal+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+String.swift"; sourceTree = "<group>"; };
 		5330F2E923D3390C00B073E8 /* SignMessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessagePresenter.swift; sourceTree = "<group>"; };
 		5330F2EA23D3390C00B073E8 /* SignMessageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessageRouter.swift; sourceTree = "<group>"; };
 		5330F2EC23D3390C00B073E8 /* SignMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignMessageViewController.swift; sourceTree = "<group>"; };
@@ -609,14 +605,12 @@
 				5330F26A23D1DF8300B073E8 /* Bundle+Info.swift */,
 				5330F25D23D1DDA100B073E8 /* Error+Info.swift */,
 				5330F25B23D1DDA000B073E8 /* String+Optional.swift */,
-				5330F25C23D1DDA100B073E8 /* URLRequest+curl.swift */,
 				538541C023D0C2FB007D5FF3 /* UIViewController+NavigarionBar.swift */,
 				5330F2B123D2368700B073E8 /* UIColor+App.swift */,
 				5330F2B323D236CB00B073E8 /* CALayer+Sketch.swift */,
 				5330F2BB23D2388800B073E8 /* Bundle+App.swift */,
 				5330F2BD23D2390F00B073E8 /* UIFont+AppTypo.swift */,
 				5330F2BF23D2397100B073E8 /* UIFont+App.swift */,
-				5330F2E623D32E5800B073E8 /* Decimal+String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1033,7 +1027,6 @@
 				5330F29323D22F0400B073E8 /* PrivateKeyKeychainBuilder.swift in Sources */,
 				5330F2BC23D2388800B073E8 /* Bundle+App.swift in Sources */,
 				5330F2D423D2812B00B073E8 /* SetupAccountWorker.swift in Sources */,
-				5330F2E723D32E5800B073E8 /* Decimal+String.swift in Sources */,
 				5330F29523D22FCA00B073E8 /* AppModels.swift in Sources */,
 				538541B723D0C11E007D5FF3 /* SplashBuilder.swift in Sources */,
 				5330F2C923D246FF00B073E8 /* SetupAccountPresenter.swift in Sources */,
@@ -1050,7 +1043,6 @@
 				53486AA723D37E4D0007729B /* QRCodeScannerViewController.swift in Sources */,
 				5330F30123D3490B00B073E8 /* SignMessageWorker.swift in Sources */,
 				5330F30A23D357A500B073E8 /* SignatureDetailsRouter.swift in Sources */,
-				5330F25F23D1DDA100B073E8 /* URLRequest+curl.swift in Sources */,
 				5330F31223D3651300B073E8 /* BarcodeGenerator.swift in Sources */,
 				5330F2B723D2374800B073E8 /* LOTTiming.swift in Sources */,
 				53D9853423D45DA900486046 /* AlertDialogController.swift in Sources */,

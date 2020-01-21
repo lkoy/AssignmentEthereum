@@ -59,6 +59,7 @@ final class SignatureDetailsViewController: BaseViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
+        
         super.viewDidDisappear(animated)
         backToUserBrightness()
     }
@@ -150,12 +151,14 @@ final class SignatureDetailsViewController: BaseViewController {
 
     // MARK: - ScreenBrightnes
        func startHandleScreenBrightness() {
+        
             userBrightness = UIScreen.main.brightness
             NotificationCenter.default.addObserver(self, selector: #selector(viewGoToBackground), name: UIApplication.willResignActiveNotification, object: nil)
             NotificationCenter.default.addObserver(self, selector: #selector(comesFromBackground), name: UIApplication.didBecomeActiveNotification, object: nil)
        }
        
        func backToUserBrightness() {
+        
            guard let brightness = userBrightness  else {
                 return
            }
@@ -164,6 +167,7 @@ final class SignatureDetailsViewController: BaseViewController {
        }
        
        func highestBrightness() {
+        
         let state = UIApplication.shared.applicationState
         if UIScreen.main.brightness < 1.0 && state != .background{
                userBrightness = UIScreen.main.brightness
@@ -172,10 +176,12 @@ final class SignatureDetailsViewController: BaseViewController {
        }
        
        @objc func viewGoToBackground() {
+        
            backToUserBrightness()
        }
     
         @objc func comesFromBackground() {
+            
             backToUserBrightness()
         }
 }
@@ -195,6 +201,7 @@ extension SignatureDetailsViewController: SignatureDetailsViewControllerProtocol
 extension SignatureDetailsViewController: TopBarViewDelegate {
     
     func topBarView(_ topBarView: TopBarView, didPressItem item: Button) {
+        
         presenter.backPressed()
     }
 }

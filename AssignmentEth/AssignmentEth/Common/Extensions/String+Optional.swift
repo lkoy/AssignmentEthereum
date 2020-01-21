@@ -10,5 +10,6 @@ import Foundation
 infix operator ???
 
 public func ???<T> (optional: T?, defaultValue: @autoclosure () -> String) -> String {
+    
     return optional.map { String(describing: $0) } ?? defaultValue()
 }

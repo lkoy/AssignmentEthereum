@@ -54,6 +54,7 @@ final class SetupAccountWorker: SetupAccountWorkerAlias {
     }
 
     private func store(account: AppModels.AccountDetails, privateKey: AppModels.PrivateKeyApp, andHandle completion: @escaping ((Result<AppModels.AccountDetails>) -> Void)) {
+        
         do {
             try privateKeyKeychain.store(codable: privateKey)
             completion(Result.success(account))

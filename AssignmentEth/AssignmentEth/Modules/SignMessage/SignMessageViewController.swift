@@ -47,6 +47,7 @@ final class SignMessageViewController: BaseViewController {
      */
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyBoardWillShow(notification:)),
@@ -73,7 +74,6 @@ final class SignMessageViewController: BaseViewController {
         messageField.title = NSLocalizedString("your_message_label", comment: "Your message label text")
         messageField.status = .normal
         messageField.keyboardType = .default
-        messageField.delegate = self
         messageField.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(messageField)
         
@@ -117,6 +117,7 @@ final class SignMessageViewController: BaseViewController {
     // MARK: Private Methods
     
     @objc private func keyBoardWillShow(notification: NSNotification) {
+        
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
             let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double {
             animateButton(duration: duration, offset: -(ViewTraits.spacing + keyboardSize.height))
@@ -124,12 +125,14 @@ final class SignMessageViewController: BaseViewController {
     }
     
     @objc private func keyBoardWillHide(notification: NSNotification) {
+        
         if let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double {
             animateButton(duration: duration, offset: -ViewTraits.marginsButton.bottom)
         }
     }
     
     private func animateButton(duration: Double, offset: CGFloat) {
+        
         bottomConstraint.constant = offset
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseIn, animations: {
             self.view.layoutSubviews()
@@ -146,12 +149,7 @@ extension SignMessageViewController: SignMessageViewControllerProtocol {
 extension SignMessageViewController: TopBarViewDelegate {
     
     func topBarView(_ topBarView: TopBarView, didPressItem item: Button) {
+        
         presenter.backPressed()
     }
-}
-
-// MARK: - UITextFieldDelegate
-extension SignMessageViewController: TextFieldDelegate {
-     
-    
 }

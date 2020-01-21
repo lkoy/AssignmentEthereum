@@ -42,10 +42,12 @@ extension AccountDetailsPresenter: AccountDetailsPresenterProtocol {
     }
     
     func continueToSign() {
+        
         self.router.navigateToSignMessage()
     }
     
     func continueToVerification() {
+        
         self.router.navigateToVerifyMessage()
     }
 }

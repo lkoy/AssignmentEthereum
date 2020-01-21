@@ -41,6 +41,7 @@ extension SignatureDetailsPresenter: SignatureDetailsPresenterProtocol {
     }
     
     func backPressed() {
+        
         router.navigateBack()
     }
 }

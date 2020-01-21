@@ -22,6 +22,7 @@ class SetupAccountRouter: BaseRouter, SetupAccountRouterProtocol {
     }
     
     func navigateToAlert(title: String, message: String, primaryAction: ((DialogAction) -> Void)?) {
+        
         let dialog = DialogController(title: title,
                                       message: message,
                                       style: .alert,

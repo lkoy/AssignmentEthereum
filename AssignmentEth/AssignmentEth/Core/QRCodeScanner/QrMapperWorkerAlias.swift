@@ -12,11 +12,13 @@ typealias QrMapperWorkerAlias = BaseWorker<[String], String>
 final class QrMapperWorker: QrMapperWorkerAlias {
     
     override func job(input: [String], completion: @escaping (String) -> Void) {
+        
         let signature = mapQr(input)
         completion(signature)
     }
     
     private func mapQr(_ qrs: [String]) -> String {
+        
         var result =  ""
         
         if let qrResult = qrs.first {

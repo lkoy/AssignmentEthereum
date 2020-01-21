@@ -25,6 +25,7 @@ class SetupAccountInteractor: BaseInteractor {
     private let worker: SetupAccountWorkerAlias
 
     init(withSetupAccountWorker worker: SetupAccountWorkerAlias = SetupAccountWorker()) {
+        
         self.worker = worker
         super.init()
     }

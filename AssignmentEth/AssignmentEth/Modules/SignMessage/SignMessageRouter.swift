@@ -18,14 +18,17 @@ protocol SignMessageRouterProtocol: BaseRouterProtocol {
 class SignMessageRouter: BaseRouter, SignMessageRouterProtocol {
 
     func navigateBack() {
+        
         navigationController?.popViewController(animated: true)
     }
     
     func navigateToSignatureDetails(details: AppModels.MessageSigned) {
+        
         navigationController?.pushViewController(SignatureDetailsBuilder.build(signatureDetails: details), animated: true)
     }
     
     func navigateToAlert(title: String, message: String, primaryAction: ((DialogAction) -> Void)?) {
+        
         let dialog = DialogController(title: title,
                                       message: message,
                                       style: .alert,

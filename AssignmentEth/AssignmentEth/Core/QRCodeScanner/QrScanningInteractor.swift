@@ -39,6 +39,7 @@ class QrScanningInteractor: BaseInteractor {
 extension QrScanningInteractor: QrScanningInteractorProtocol {
 
     func processQrs(qrs: [String]) {
+        
         qrMapperWorker.execute(input: qrs) { [weak self] (signature) in
             guard let self = self else { return }
             if signature.count > 0 {
@@ -50,6 +51,7 @@ extension QrScanningInteractor: QrScanningInteractorProtocol {
     }
     
     func getCameraPermissionsStatus() {
+        
         if camera.status == .denied {
             self.presenter.disabledCameraPermissions()
         } else if camera.status == .notDetermined {

@@ -16,6 +16,7 @@ protocol SignatureDetailsRouterProtocol: BaseRouterProtocol {
 class SignatureDetailsRouter: BaseRouter, SignatureDetailsRouterProtocol {
 
     func navigateBack() {
+        
         navigationController?.popViewController(animated: true)
     }
 }

@@ -47,11 +47,13 @@ final class QRCodeScannerViewController: BaseViewController {
      */
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         presenter.prepareView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         super.viewDidAppear(animated)
         presenter.viewAppear()
     }
@@ -150,6 +152,7 @@ final class QRCodeScannerViewController: BaseViewController {
     }
     
     private func mapQrs(_ metadataObjects: [AVMetadataObject]) -> [String] {
+        
         let qrsReaded = metadataObjects.map { (metadataObject) -> String in
             guard metadataObject.type == AVMetadataObject.ObjectType.qr,
                 let qrObject = metadataObject as? AVMetadataMachineReadableCodeObject else {
@@ -188,10 +191,12 @@ extension QRCodeScannerViewController: QRCodeScannerViewControllerProtocol {
 extension QRCodeScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
     
     func stopScanning() {
+        
         captureSession.stopRunning()
     }
     
     func startScanning() {
+        
         self.view.backgroundColor = .appWhite
         if AVCaptureDevice.authorizationStatus(for: AVMediaType.video) == .authorized {
             captureSession.startRunning()
@@ -203,6 +208,7 @@ extension QRCodeScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
 extension QRCodeScannerViewController: TopBarViewDelegate {
     
     func topBarView(_ topBarView: TopBarView, didPressItem item: Button) {
+        
         presenter.backPressed()
     }
 }

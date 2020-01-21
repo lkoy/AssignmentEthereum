@@ -22,6 +22,7 @@ class AccountDetailsRouter: BaseRouter, AccountDetailsRouterProtocol {
     }
     
     func navigateToVerifyMessage() {
+        
         navigationController?.pushViewController(VerifyMessageBuilder.build(), animated: true)
     }
 }

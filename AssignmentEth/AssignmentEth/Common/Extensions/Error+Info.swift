@@ -8,6 +8,7 @@
 import Foundation
 
 extension Error {
+    
     var code: Int {
         let error = self as NSError
         return error.code

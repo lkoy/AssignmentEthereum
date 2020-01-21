@@ -41,6 +41,7 @@ final class QRCodeScannerPresenter<T: QRCodeScannerViewControllerProtocol, U: QR
     }
     
     func verifyMessageWithSignature(_ signature: String) {
+        
         self.verifyMessageInteractor.verifyMessage(self.messageToVerify, signature: signature)
     }
     
@@ -54,15 +55,18 @@ extension QRCodeScannerPresenter: QRCodeScannerPresenterProtocol {
     }
     
     func readedQrs(_ qrs: [String]) {
+        
         viewController.stopScanning()
         qrScanningInteractor.processQrs(qrs: qrs)
     }
     
     func viewAppear() {
+        
         viewController.startScanning()
     }
     
     func backPressed() {
+        
         router.navigateBack()
     }
     
@@ -71,14 +75,17 @@ extension QRCodeScannerPresenter: QRCodeScannerPresenterProtocol {
 extension QRCodeScannerPresenter: QrScanningInteractorCallbackProtocol {
     
     func notDeterminedCameraPermissions() {
+        
         viewController.askForCameraPermissions()
     }
     
     func authorizedCameraPermissions() {
+        
         viewController.showVideoView()
     }
     
     func disabledCameraPermissions() {
+        
 //        router.showCameraPermissionsDenied(closeAction: nil)
     }
     
@@ -118,6 +125,7 @@ extension QRCodeScannerPresenter: VerifyMessageInteractorCallbackProtocol {
     }
     
     func show(error: VerifyMessageInteractorError) {
+        
         self.router.navigateToAlert(title: NSLocalizedString("error_alert_title", comment: "Error alert title"),
                                     message: NSLocalizedString("error_signature_message", comment: "Error signature message"),
                                     primaryAction: { [weak self] (_) in

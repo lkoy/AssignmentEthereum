@@ -12,6 +12,7 @@ import UIKit.UIImage
 final class SignatureDetailsMapper {
 
     final func map(details: AppModels.MessageSigned, barCodeImage: UIImage?) -> SignatureDetails.ViewModel {
+        
         var image: UIImage!
         if let imageQr = barCodeImage {
             image = imageQr

@@ -17,10 +17,12 @@ protocol QRCodeScannerRouterProtocol: BaseRouterProtocol {
 class QRCodeScannerRouter: BaseRouter, QRCodeScannerRouterProtocol {
 
     func navigateBack() {
+        
         navigationController?.popViewController(animated: true)
     }
     
     func navigateToAlert(title: String, message: String, primaryAction: ((DialogAction) -> Void)?) {
+        
         let dialog = DialogController(title: title,
                                       message: message,
                                       style: .alert)

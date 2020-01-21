@@ -47,6 +47,7 @@ final class SetupAccountViewController: BaseViewController {
      */
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyBoardWillShow(notification:)),
@@ -59,8 +60,8 @@ final class SetupAccountViewController: BaseViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(animated)
-        showKeyboard()
     }
 
     // MARK: - Setup
@@ -116,7 +117,7 @@ final class SetupAccountViewController: BaseViewController {
     // MARK: - Actions
     
     @objc private func confirmTapped() {
-        "30278911D6B6E8FB4D53AF9F4EBAF8B8BEA8D6752CCB1FC316E4EC861D87AFD9"
+        
         let privateKey = privateKeyField.value
         self.presenter.getDetails(forInput: privateKey)
     }
@@ -124,6 +125,7 @@ final class SetupAccountViewController: BaseViewController {
     // MARK: Private Methods
 
     @objc private func keyBoardWillShow(notification: NSNotification) {
+        
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
             let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double {
             animateButton(duration: duration, offset: -(ViewTraits.spacing + keyboardSize.height))
@@ -131,12 +133,14 @@ final class SetupAccountViewController: BaseViewController {
     }
     
     @objc private func keyBoardWillHide(notification: NSNotification) {
+        
         if let duration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double {
             animateButton(duration: duration, offset: -ViewTraits.marginsButton.bottom)
         }
     }
     
     private func animateButton(duration: Double, offset: CGFloat) {
+        
         bottomConstraint.constant = offset
         UIView.animate(withDuration: duration, delay: 0, options: .curveEaseIn, animations: {
             self.view.layoutSubviews()
@@ -148,14 +152,17 @@ final class SetupAccountViewController: BaseViewController {
 extension SetupAccountViewController: SetupAccountViewControllerProtocol {
  
     func showKeyboard() {
-//        privateKeyField.becomeFirstResponder()
+        
+        privateKeyField.becomeFirstResponder()
     }
     
     func showLoadingState() {
+        
         confirmButton.isLoading = true
     }
     
     func hideLoadingState() {
+        
         confirmButton.isLoading = false
     }
 }
@@ -164,6 +171,7 @@ extension SetupAccountViewController: SetupAccountViewControllerProtocol {
 extension SetupAccountViewController: TextFieldDelegate {
      
     func textFieldDidPressReturnKey(_ textField: TextField) {
+        
         self.presenter.getDetails(forInput:textField.value)
     }
 }

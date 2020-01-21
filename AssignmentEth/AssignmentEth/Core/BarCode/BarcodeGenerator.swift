@@ -12,6 +12,7 @@ import AVFoundation
 class BarcodeGenerator {
     
     func generate(code: String) -> UIImage? {
+        
         let data = code.data(using: String.Encoding.ascii)
         if let filter = CIFilter(name: "CIQRCodeGenerator") {
             filter.setValue(data, forKey: "inputMessage")

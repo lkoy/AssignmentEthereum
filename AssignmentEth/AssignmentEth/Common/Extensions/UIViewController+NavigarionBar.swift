@@ -11,10 +11,12 @@ import UIKit.UIViewController
 extension UIViewController {
     
     @objc open var prefersNavigationBarHidden: Bool {
+        
         return false
     }
     
     @objc open var prefersNavigationBackButtonHidden: Bool {
+        
         return false
     }
 }
