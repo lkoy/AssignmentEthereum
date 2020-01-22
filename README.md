@@ -25,3 +25,6 @@ I chose this architecture because is scalable and easy to test. I added testing 
 The most important challenge was the blockchain an Ethereum network, first of all I was researching about these topics.
 After some research, I decided to use EthereumKit framework to get the wallet account, get the balance information and perform the sign and messages validation. 
 EthereumKit didn't have Rinkeby Ethereum Testnet implemented, so I created a fork from EthereumKit and added the Rinbeky Testnet and added to my project via Carthage.
+
+
+*Note: Carthage used to manage dependencies (run carthage bootstrap --platform ios command on the project folder)*
