@@ -27,4 +27,4 @@ After some research, I decided to use EthereumKit framework to get the wallet ac
 EthereumKit didn't have Rinkeby Ethereum Testnet implemented, so I created a fork from EthereumKit and added the Rinbeky Testnet and added to my project via Carthage.
 
 
-*Note: Carthage used to manage dependencies (carthage bootstrap --platform ios)*
+*Note: Carthage used to manage dependencies (run carthage bootstrap --platform ios command on the project folder)*
