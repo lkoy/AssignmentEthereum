@@ -86,7 +86,9 @@ extension QRCodeScannerPresenter: QrScanningInteractorCallbackProtocol {
     
     func disabledCameraPermissions() {
         
-//        router.showCameraPermissionsDenied(closeAction: nil)
+        self.router.navigateToAlert(title: NSLocalizedString("error_alert_title", comment: "Error alert title"),
+                                    message: NSLocalizedString("error_disabled_camera_message", comment: "Camera disabled"),
+                                    primaryAction: nil)
     }
     
     func foundQR(signature: String) {
@@ -96,7 +98,9 @@ extension QRCodeScannerPresenter: QrScanningInteractorCallbackProtocol {
     
     func invalidQr() {
         
-        self.router.navigateToAlert(title: "Error", message: "QR not Valid", primaryAction: { [weak self] (_) in
+        self.router.navigateToAlert(title: NSLocalizedString("error_alert_title", comment: "Error alert title"),
+                                    message: NSLocalizedString("error_invalid_qr_message", comment: "QR not valid format"),
+                                    primaryAction: { [weak self] (_) in
             guard let self = self else { return }
             
             self.viewController.startScanning()

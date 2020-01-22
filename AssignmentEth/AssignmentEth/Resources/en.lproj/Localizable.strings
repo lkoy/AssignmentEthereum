@@ -24,6 +24,8 @@
 "error_account_details_message" = "An error occurred getting the account details.";
 "error_singing_message" = "An error occurred singing message.";
 "error_signature_message" = "Signature not well formed";
+"error_invalid_qr_message" = "The QR code is not valid";
+"error_disabled_camera_message" = "Te camera is disables";
 
 "validation_alert_title" = "Message";
 "validation_valid_mesage" = "Signature valid";

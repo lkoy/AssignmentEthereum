@@ -53,6 +53,16 @@ class QRCodeScannerPresenterTests: XCTestCase {
         expect(self.viewControllerSpy.showVideoViewCalled).toEventually(equal(1))
     }
     
+    func test_given_camera_permision_denied_then_navigate_aler_error() {
+        
+        qrScanningInteractor.stubQrScanningFunctionFor(self.sut.disabledCameraPermissions())
+        
+        sut.prepareView()
+
+        expect(self.routerSpy.navigateToAlertCalled).toEventually(equal(1))
+        expect(self.viewControllerSpy.signatureValidCalled).toEventually(equal(0))
+    }
+    
     func test_given_qr_found_with_message_valid_then_navigate_alert_valid() {
         
         qrScanningInteractor.stubQrScanningFunctionFor(self.sut.foundQR(signature: "signature"))
